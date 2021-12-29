@@ -13035,10 +13035,6 @@ body.body_dark {
     padding: 26px;
     height: 560px;
 }
-@media (max-width: 1400px) {
-  .login-card1{
-    height: 630px;
-  }
 .bor{
     color:white;
     opacity: 0.5;
