@@ -14,21 +14,7 @@
 @endsection
 @section('content')
 <section class="banner-area-4 pt-lg-120 pt-55 pb-120 has_search">
-<div class="banner-shapes">
-    <div class="shape">
-        <img data-parallax='{"x": 50, "y": 0, "rotateZ":0}' src="img/home_three/banner-shape-1.png"
-            alt="shape">
-    </div>
-    <div class="shape">
-        <img data-parallax='{"x":50 , "y": 0, "rotateZ":0}' src="img/home_three/banner-shape-2.png"
-            alt="shape">
-    </div>
-    <div class="shape">
-        <img data-parallax='{"x": 250, "y": 0, "rotateZ":0}' src="img/home_three/banner-shape-3.png"
-            alt="shape">
-    </div>
 
-</div>
 <div class="container">
     <div class="row pt-120 pb-30">
         <div class="col-lg-9 doc_banner_content search-banner-light text-center mx-auto pt-20">
@@ -176,117 +162,627 @@
     </div>
 </section> -->
 <!-- ==========Features-Section========== -->
-<section class="feature-section extra-feature pt-0 pb-mine mt-top--100">
-    <div class="container">
-        <div class="row mb-5">
-            <div class="col-md-12 text-center">
-                <h3>Subjects</h3>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-12">
-                <div class="registered-slider owl-carousel">
-                    <div class="single-slider text-center">
-                        <a href="{{url('/categories')}}" class="btn btn-theme btn-slider">All</a>
+<section class="bg-disable pb-100">
+<div class="container">
+    <div class="row gy-lg-0 gy-4">
+
+        <!--======= Left bar ======-->
+        <div class="col-lg-8 ">
+            <div class="forum-post-widget">
+                <div class="widget-header d-flex align-items-center justify-content-between mb-30">
+                    <h2 class="mb-0 wow fadeInRight">Ama</h2>
+
+                    <a href="add-question.html" class="action_btn btn-text-medium wow fadeInLeft">Post a
+                        Question</a>
+                </div>
+
+                <div class="post-filter-widget mb-20 wow fadeInUp">
+                    <div class="single-filter-item ">
+                        <input type="radio" name="post_filter" id="all_filt">
+                        <label for="all_filt">
+                            <img class="main-img" src="{{ asset('/front/img/home_three/filter-icon-1.1.png')}}" alt="icon">
+                            <img class="hover-img" src="{{ asset('/front/img/home_three/filter-icon-1.2.png')}}" alt="icon"> All
+                        </label>
                     </div>
-                    @foreach($categories as $r)
-                    <div class="single-slider text-center">
+                    <div class="single-filter-item">
+                        <input type="radio" name="post_filter" id="populer_filt">
+                        <label for="populer_filt">
+                            <img class="main-img" src="{{ asset('/front/img/home_three/filter-icon-2.1.png')}}" alt="icon">
+                            <img class="hover-img" src="{{ asset('/front/img/home_three/filter-icon-2.2.png')}}" alt="icon">
+                            Popular
+                        </label>
+                    </div>
+                    <div class="single-filter-item">
+                        <input type="radio" name="post_filter" id="featured_filt">
+                        <label for="featured_filt">
+                            <img class="main-img" src="{{ asset('/front/img/home_three/filter-icon-3.1.png')}}" alt="icon">
+                            <img class="hover-img" src="{{ asset('/front/img/home_three/filter-icon-3.2.png')}}" alt="icon">
+                            Featured
+                        </label>
+                    </div>
+                    <div class="single-filter-item">
+                        <input type="radio" name="post_filter" id="recent_filt">
+                        <label for="recent_filt">
+                            <img class="main-img" src="{{ asset('/front/img/home_three/filter-icon-4.1.png')}}" alt="icon">
+                            <img class="hover-img" src="{{ asset('/front/img/home_three/filter-icon-4.2.png')}}" alt="icon">
+                            Recent
+                        </label>
+                    </div>
+                    <div class="single-filter-item">
+                        <input type="radio" name="post_filter" id="unsolved_filt">
+                        <label for="unsolved_filt">
+                            <img class="main-img" src="{{ asset('/front/img/home_three/filter-icon-5.1.png')}}" alt="icon">
+                            <img class="hover-img" src="{{ asset('/front/img/home_three/filter-icon-5.2.png')}}" alt="icon">
+                            Unsolved
+                        </label>
+                    </div>
+                    <div class="single-filter-item">
+                        <input type="radio" name="post_filter" id="solved_filt">
+                        <label for="solved_filt">
+                            <img class="main-img" src="{{ asset('/front/img/home_three/filter-icon-6.1.png')}}" alt="icon">
+                            <img class="hover-img" src="{{ asset('/front/img/home_three/filter-icon-6.2.png')}}" alt="icon">
+                            Solved
+                        </label>
+                    </div>
+                </div>
 
-                        <a href="{{url('')}}/{{ $r->url }}" class="btn btn-theme btn-slider">
-                            <div class="row">
-                                <div class="col-md-3 col-4">
-                                    @if(!empty(Cmf::get_image_name('subjectimages' , 'subjectid' , $r->id)->first()->image_name))
-                                    <img class="home-cat-icon" src="{{ url('/images/') }}/{{ Cmf::get_image_name('subjectimages' , 'subjectid' , $r->id)->first()->image_name }}">
-
-                                    @endif
-                                </div>
-                                <div class="col-md-9 col-8"><span class="cat-text-limit">{!! Str::limit($r->name, 8) !!}</span></div>
+                <div class="single-forum-post-widget wow fadeInUp">
+                    <div class="post-content">
+                        <div class="post-title">
+                            <h6><a href="#">This forum is a special forum for general announcements.</a>
+                                <span><i class="icon_check_alt2"></i></span>
+                            </h6>
+                        </div>
+                        <div class="post-info">
+                            <div class="author">
+                                <img src="{{ asset('/front/img/user-circle-alt.svg')}}" alt="icon">Zain Siphron
                             </div>
-                            </a>
+
+                            <div class="post-time">
+                                <img src="{{ asset('/front/img/time-outline.svg')}}" alt="">10 min ago
+                            </div>
+                            <div class="post-category">
+                                <a href="#">
+                                    <img src="{{ asset('/front/img/home_three/forum-catagory-02.svg')}}" alt="">Announcements
+                                </a>
+                            </div>
+                        </div>
+                        <div class="post-tags">
+                            <div class="single-tag tag-jq">jQuery</div>
+                            <div class="single-tag tag-php">Php</div>
+                        </div>
                     </div>
-                    @endforeach
+                    <div class="post-reach">
+                        <div class="post-view">
+                            <img src="{{ asset('/front/img/forum/eye-outline.svg')}}" alt="icon">591 Views
+                        </div>
+                        <div class="post-like">
+                            <img src="{{ asset('/front/img/forum/thumbs-up-outline.svg')}}" alt="icon">250 Likes
+                        </div>
+                        <div class="post-comment">
+                            <img src="{{ asset('/front/img/forum/chatbubbles-outline.svg')}}" alt="icon">155 Replies
+                        </div>
+                    </div>
+                </div>
+                <div class="single-forum-post-widget wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="post-content">
+                        <div class="post-title">
+                            <h6><a href="#">Welcome to the Cosplayers Group Forum!</a>
+                            </h6>
+                        </div>
+                        <div class="post-info">
+                            <div class="author">
+                                <img src="{{ asset('/front/img/user-circle-alt.svg')}}" alt="icon">Zain Siphron
+                            </div>
+
+                            <div class="post-time">
+                                <img src="{{ asset('/front/img/time-outline.svg')}}" alt="">10 min ago
+                            </div>
+                            <div class="post-category">
+                                <a href="#">
+                                    <img src="{{ asset('/front/img/home_three/forum-catagory-01.svg')}}" alt="">Getting started
+                                </a>
+                            </div>
+                        </div>
+                        <div class="post-tags">
+                            <div class="single-tag tag-wp">WordPress</div>
+                            <div class="single-tag tag-php">Php</div>
+                        </div>
+                    </div>
+                    <div class="post-reach">
+                        <div class="post-view">
+                            <img src="{{ asset('/front/img/forum/eye-outline.svg')}}" alt="icon">591 Views
+                        </div>
+                        <div class="post-like">
+                            <img src="{{ asset('/front/img/forum/thumbs-up-outline.svg')}}" alt="icon">250 Likes
+                        </div>
+                        <div class="post-comment">
+                            <img src="{{ asset('/front/img/forum/chatbubbles-outline.svg')}}" alt="icon">155 Replies
+                        </div>
+                    </div>
+                </div>
+                <div class="single-forum-post-widget wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="post-content">
+                        <div class="post-title">
+                            <h6><a href="#">How i can set non-scroll area in Ama?.</a>
+                                <span><i class="icon_check_alt2"></i></span>
+                            </h6>
+
+                        </div>
+                        <div class="post-info">
+                            <div class="author">
+                                <img src="{{ asset('/front/img/user-circle-alt.svg')}}" alt="icon">Zain Siphron
+                            </div>
+
+                            <div class="post-time">
+                                <img src="{{ asset('/front/img/time-outline.svg')}}" alt="">10 min ago
+                            </div>
+                            <div class="post-category">
+                                <a href="#">
+                                    <img src="{{ asset('/front/img/home_three/forum-catagory-04.svg')}}" alt="">Customers
+                                </a>
+                            </div>
+                        </div>
+                        <div class="post-tags">
+                            <div class="single-tag tag-js">JavaScript</div>
+                            <div class="single-tag tag-php">Php</div>
+                        </div>
+                    </div>
+                    <div class="post-reach">
+                        <div class="post-view">
+                            <img src="{{ asset('/front/img/forum/eye-outline.svg')}}" alt="icon">591 Views
+                        </div>
+                        <div class="post-like">
+                            <img src="{{ asset('/front/img/forum/thumbs-up-outline.svg')}}" alt="icon">250 Likes
+                        </div>
+                        <div class="post-comment">
+                            <img src="{{ asset('/front/img/forum/chatbubbles-outline.svg')}}" alt="icon">155 Replies
+                        </div>
+                    </div>
+                </div>
+                <div class="single-forum-post-widget wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="post-content">
+                        <div class="post-title">
+                            <h6><a href="#">Join Ama Discord Community!</a>
+                            </h6>
+                        </div>
+                        <div class="post-info">
+                            <div class="author">
+                                <img src="{{ asset('/front/img/user-circle-alt.svg')}}" alt="icon">Zain Siphron
+                            </div>
+
+                            <div class="post-time">
+                                <img src="{{ asset('/front/img/time-outline.svg')}}')}}" alt="">10 min ago
+                            </div>
+                            <div class="post-category">
+                                <a href="#">
+                                    <img src="{{ asset('/front/img/home_three/forum-catagory-02.svg')}}" alt="">Announcements
+                                </a>
+                            </div>
+                        </div>
+                        <div class="post-tags">
+                            <div class="single-tag tag-dvlp">Development</div>
+                        </div>
+                    </div>
+                    <div class="post-reach">
+                        <div class="post-view">
+                            <img src="{{ asset('/front/img/forum/eye-outline.svg')}}" alt="icon">591 Views
+                        </div>
+                        <div class="post-like">
+                            <img src="{{ asset('/front/img/forum/thumbs-up-outline.svg')}}" alt="icon">250 Likes
+                        </div>
+                        <div class="post-comment">
+                            <img src="{{ asset('/front/img/forum/chatbubbles-outline.svg')}}" alt="icon">155 Replies
+                        </div>
+                    </div>
+                </div>
+                <div class="single-forum-post-widget wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="post-content">
+                        <div class="post-title">
+                            <h6><a href="#">What is the latest version of jQuery ?</a>
+                            </h6>
+                        </div>
+                        <div class="post-info">
+                            <div class="author">
+                                <img src="{{ asset('/front/img/user-circle-alt.svg')}}" alt="icon">Zain Siphron
+                            </div>
+
+                            <div class="post-time">
+                                <img src="{{ asset('/front/img/time-outline.svg')}}" alt="">10 min ago
+                            </div>
+                            <div class="post-category">
+                                <a href="#">
+                                    <img src="{{ asset('/front/img/home_three/forum-catagory-02.svg')}}" alt="">Announcements
+                                </a>
+                            </div>
+                        </div>
+                        <div class="post-tags">
+                            <div class="single-tag tag-jq">jQuery</div>
+                            <div class="single-tag tag-php">Php</div>
+                        </div>
+                    </div>
+                    <div class="post-reach">
+                        <div class="post-view">
+                            <img src="{{ asset('/front/img/forum/eye-outline.svg')}}" alt="icon">591 Views
+                        </div>
+                        <div class="post-like">
+                            <img src="{{ asset('/front/img/forum/thumbs-up-outline.svg')}}" alt="icon">250 Likes
+                        </div>
+                        <div class="post-comment">
+                            <img src="{{ asset('/front/img/forum/chatbubbles-outline.svg')}}" alt="icon">155 Replies
+                        </div>
+                    </div>
+                </div>
+                <div class="single-forum-post-widget wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="post-content">
+                        <div class="post-title">
+                            <h6><a href="#">Any tips on how to improve in the future?</a>
+                            </h6>
+                        </div>
+                        <div class="post-info">
+                            <div class="author">
+                                <img src="{{ asset('/front/img/user-circle-alt.svg')}}" alt="icon">Zain Siphron
+                            </div>
+
+                            <div class="post-time">
+                                <img src="{{ asset('/front/img/time-outline.svg')}}" alt="">10 min ago
+                            </div>
+                            <div class="post-category">
+                                <a href="#">
+                                    <img src="{{ asset('/front/img/home_three/forum-catagory-04.svg')}}" alt="">Customers
+                                </a>
+                            </div>
+                        </div>
+                        <div class="post-tags">
+                            <div class="single-tag tag-ecmrc">ecommerce</div>
+                        </div>
+                    </div>
+                    <div class="post-reach">
+                        <div class="post-view">
+                            <img src="{{ asset('/front/img/forum/eye-outline.svg')}}" alt="icon">591 Views
+                        </div>
+                        <div class="post-like">
+                            <img src="{{ asset('/front/img/forum/thumbs-up-outline.svg')}}" alt="icon">250 Likes
+                        </div>
+                        <div class="post-comment">
+                            <img src="{{ asset('/front/img/forum/chatbubbles-outline.svg')}}" alt="icon">155 Replies
+                        </div>
+                    </div>
+                </div>
+                <div class="single-forum-post-widget wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="post-content">
+                        <div class="post-title">
+                            <h6><a href="#">How to optimize WordPress theme?</a>
+                                <span><i class="icon_check_alt2"></i></span>
+                            </h6>
+
+                        </div>
+                        <div class="post-info">
+                            <div class="author">
+                                <img src="{{ asset('/front/img/user-circle-alt.svg')}}" alt="icon">Zain Siphron
+                            </div>
+
+                            <div class="post-time">
+                                <img src="{{ asset('/front/img/time-outline.svg')}}" alt="">10 min ago
+                            </div>
+                            <div class="post-category">
+                                <a href="#">
+                                    <img src="{{ asset('/front/img/home_three/forum-catagory-02.svg')}}" alt="">Announcements
+                                </a>
+                            </div>
+                        </div>
+                        <div class="post-tags">
+                            <div class="single-tag tag-wp">WordPress</div>
+                        </div>
+                    </div>
+                    <div class="post-reach">
+                        <div class="post-view">
+                            <img src="{{ asset('/front/img/forum/eye-outline.svg')}}" alt="icon">591 Views
+                        </div>
+                        <div class="post-like">
+                            <img src="{{ asset('/front/img/forum/thumbs-up-outline.svg')}}" alt="icon">250 Likes
+                        </div>
+                        <div class="post-comment">
+                            <img src="{{ asset('/front/img/forum/chatbubbles-outline.svg')}}" alt="icon">155 Replies
+                        </div>
+                    </div>
+                </div>
+                <div class="single-forum-post-widget wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="post-content">
+                        <div class="post-title">
+                            <h6><a href="#">What is necessary to become a template developer?</a>
+                            </h6>
+                        </div>
+                        <div class="post-info">
+                            <div class="author">
+                                <img src="{{ asset('/front/img/user-circle-alt.svg')}}" alt="icon">Zain Siphron
+                            </div>
+
+                            <div class="post-time">
+                                <img src="{{ asset('/front/img/time-outline.svg')}}" alt="">10 min ago
+                            </div>
+                            <div class="post-category">
+                                <a href="#">
+                                    <img src="{{ asset('/front/img/home_three/forum-catagory-02.svg')}}" alt="">Announcements
+                                </a>
+                            </div>
+                        </div>
+                        <div class="post-tags">
+                            <div class="single-tag tag-dvlp">Development</div>
+                        </div>
+                    </div>
+                    <div class="post-reach">
+                        <div class="post-view">
+                            <img src="{{ asset('/front/img/user-circle-alt.svg')}}" alt="icon">591 Views
+                        </div>
+                        <div class="post-like">
+                            <img src="{{ asset('/front/img/forum/thumbs-up-outline.svg')}}" alt="icon">250 Likes
+                        </div>
+                        <div class="post-comment">
+                            <img src="{{ asset('/front/img/forum/chatbubbles-outline.svg')}}" alt="icon">155 Replies
+                        </div>
+                    </div>
+                </div>
+                <div class="single-forum-post-widget wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="post-content">
+                        <div class="post-title">
+                            <h6><a href="#">How can i downlaod my hidden items?</a>
+                            </h6>
+                        </div>
+                        <div class="post-info">
+                            <div class="author">
+                                <img src="{{ asset('/front/img/user-circle-alt.svg')}}" alt="icon">Zain Siphron
+                            </div>
+
+                            <div class="post-time">
+                                <img src="{{ asset('/front/img/time-outline.svg')}}" alt="">10 min ago
+                            </div>
+                            <div class="post-category">
+                                <a href="#">
+                                    <img src="{{ asset('/front/img/home_three/forum-catagory-04.svg')}}" alt="">Customers
+                                </a>
+                            </div>
+                        </div>
+                        <div class="post-tags">
+                            <div class="single-tag tag-js">JavaScript</div>
+                        </div>
+                    </div>
+                    <div class="post-reach">
+                        <div class="post-view">
+                            <img src="{{ asset('/front/img/forum/eye-outline.svg')}}" alt="icon">591 Views
+                        </div>
+                        <div class="post-like">
+                            <img src="{{ asset('/front/img/forum/thumbs-up-outline.svg')}}" alt="icon">250 Likes
+                        </div>
+                        <div class="post-comment">
+                            <img src="{{ asset('/front/img/forum/chatbubbles-outline.svg')}}" alt="icon">155 Replies
+                        </div>
+                    </div>
+                </div>
+                <div class="single-forum-post-widget wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="post-content">
+                        <div class="post-title">
+                            <h6><a href="#">Which software is used for jQuery?</a>
+                            </h6>
+                        </div>
+                        <div class="post-info">
+                            <div class="author">
+                                <img src="{{ asset('/front/img/user-circle-alt.svg')}}" alt="icon">Zain Siphron
+                            </div>
+
+                            <div class="post-time">
+                                <img src="{{ asset('/front/img/time-outline.svg')}}" alt="">10 min ago
+                            </div>
+                            <div class="post-category">
+                                <a href="#">
+                                    <img src="{{ asset('/front/img/home_three/forum-catagory-02.svg')}}" alt="">Announcements
+                                </a>
+                            </div>
+                        </div>
+                        <div class="post-tags">
+                            <div class="single-tag tag-jq">jQuery</div>
+                        </div>
+                    </div>
+                    <div class="post-reach">
+                        <div class="post-view">
+                            <img src="{{ asset('/front/img/user-circle-alt.svg')}}" alt="icon">591 Views
+                        </div>
+                        <div class="post-like">
+                            <img src="{{ asset('/front/img/forum/thumbs-up-outline.svg')}}" alt="icon">250 Likes
+                        </div>
+                        <div class="post-comment">
+                            <img src="{{ asset('/front/img/forum/chatbubbles-outline.svg')}}" alt="icon">155 Replies
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- ==========Features-Section========== -->
-<!-- ==========Update-profile-Section========== -->
-<section class="update-profile-section">
-    <div class="hero-body">
-            <div class="container">
 
-                <div class="row mb-4">
-                    <div class="col-md-12 text-center">
-                        <h3>Get the top rated result, in just a sec.</h3>
+        <!--======= Right Sidebar =======-->
+        <div class="col-lg-4">
+            <div class="forum-right-sidebar-widget pl-lg-40">
+                <div class="single-widget-box login-widget">
+                    <form action="#">
+                        <input type="text" class="form-control" placeholder="Username">
+                        <input type="password" class="form-control mt-20 mb-20" placeholder="Password">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Remember me
+                            </label>
+                        </div>
+
+                        <button type="submit" class="doc_border_btn doc_border_btn_two w-100">Login</button>
+                    </form>
+                </div>
+
+                <div class="single-widget-box stat-widget mt-40">
+                    <div class="widget-header">
+                        <img src="img/img/statistics-icon.png" alt="icon">
+                        <h5>Ama Statistics</h5>
+                    </div>
+                    <div class="row gx-0">
+                        <div class="col-4 text-center py-4">
+                            <img src="img/img/speech-bubble.png" alt="">
+                            <p>Topics</p>
+                            <h5>50</h5>
+                        </div>
+                        <div class="col-4 text-center py-4 border-end border-start">
+                            <img src="{{ asset('/font/img/img/writing.png')}}" alt="">
+                            <p>Posts</p>
+                            <h5>350</h5>
+                        </div>
+                        <div class="col-4 text-center py-4">
+                            <img src="{{ asset('/font/img/img/user-icon.png')}}" alt="">
+                            <p>Users</p>
+                            <h5>599</h5>
+                        </div>
                     </div>
                 </div>
-                <br>
-                <div class="row mb-5">
-                    <div class="col-md-12 text-center">
-                        <img width="230px" src="{{asset('/front/assets/images/shahzad/landing-ratings.svg')}}" alt="answerout">
+
+                <div class="single-widget-box populer-topics mt-40">
+                    <div class="widget-header">
+                        <img src="{{ asset('/font/img/speech-bubble.png')}}" alt="icon">
+                        <h5>Popular Topics</h5>
                     </div>
-                </div>
-                <div id="customers-testimonials" class="owl-carousel mt-2">
-                    @foreach(DB::table('testimonials')->where('status' , 'Published')->get() as $r)
-                    <div class="box">
-                        <div class="level-item">
-                            <div>
-                                <div class="heading">
-                                    <img class="avatar" src="{{ url('/images/') }}/{{ $r->image }}" width="100px" height="100px">
+                    <div class="widget-content">
+                        <div class="single-topic">
+                            <span class="topic-no">01</span>
+                            <div class="topic-content">
+                                <h6><a href="forum-single.html">Cannot reset my password</a></h6>
+                                <div class="topic-info">
+                                    <div>
+                                        <img src="{{ asset('/front/img/forum/topic-user-outline.svg')}}" alt="">
+                                        <span>Zain Siphron</span>
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('/front/img/forum/topic-calendar-outline.png')}}" alt="">
+                                        <span>Apr 15, 2021</span>
+                                    </div>
                                 </div>
-                                <div class="row p-3">
-                                    <div class="col-md-12 text-center">
-                                        <p>“{{ $r->testimonial }}”</p>
+                            </div>
+                        </div>
+                        <div class="single-topic">
+                            <span class="topic-no">02</span>
+                            <div class="topic-content">
+                                <h6><a href="forum-single.html">How can I cancel my subscription?</a></h6>
+                                <div class="topic-info">
+                                    <div>
+                                        <img src="{{ asset('/front/img/forum/topic-user-outline.svg')}}" alt="">
+                                        <span>Zain Siphron</span>
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('/front/img/forum/topic-calendar-outline.png')}}" alt="">
+                                        <span>Apr 15, 2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-topic">
+                            <span class="topic-no">03</span>
+                            <div class="topic-content">
+                                <h6><a href="forum-single.html">Ama a drag-and-drop interaction</a></h6>
+                                <div class="topic-info">
+                                    <div>
+                                        <img src="{{ asset('/front/img/forum/topic-user-outline.svg')}}" alt="">
+                                        <span>Zain Siphron</span>
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('/front/img/forum/topic-calendar-outline.png')}}" alt="">
+                                        <span>Apr 15, 2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-topic">
+                            <span class="topic-no">04</span>
+                            <div class="topic-content">
+                                <h6><a href="forum-single.html">Can we use API in WordPress?</a></h6>
+                                <div class="topic-info">
+                                    <div>
+                                        <img src="{{ asset('/front/img/forum/topic-user-outline.svg')}}" alt="">
+                                        <span>Zain Siphron</span>
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('/front/img/forum/topic-calendar-outline.png')}}" alt="">
+                                        <span>Apr 15, 2021</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    @endforeach
-
                 </div>
-            </div>
-        </div>
-</section>
-<!-- ==========Update-profile-Section========== -->
-<section class="feature-section extra-feature pt-0 pb-mine mt-top--100">
-    <div class="container">
-        <div class="row mb-5 mt-3">
-            <div class="col-md-12 text-center">
-                <h3>Blog Categories</h3>
-            </div>
-        </div>
 
-
-        <div class="row justify-content-center">
-            <div class="col-lg-12">
-                <div class="registered-slider owl-carousel">
-
-
-                    <div class="single-slider text-center">
-                        <a href="{{url('/study-tools')}}" class="btn btn-theme btn-slider">
-                            <div class="row">
-                                <div class="col-md-12 col-12"><span class="cat-text-limit">Study Tools</span></div>
-                            </div>
-                            </a>
+                <div class="single-widget-box helpful-user mt-40">
+                    <div class="widget-header">
+                        <img src="{{ asset('/font/img/usre-icon.png')}}" alt="icon">
+                        <h5>Most Helpful Users</h5>
                     </div>
-
-                    <div class="single-slider text-center">
-                        <a href="{{url('/colleges-and-education')}}" class="btn btn-theme btn-slider">
-                            <div class="row">
-                                <div class="col-md-12 col-12"><span class="cat-text-limit">College & Education</span></div>
+                    <div class="widget-content">
+                        <div class="single-user">
+                            <div class="user-img active">
+                                <img src="{{ asset('/front/img/forum/helpful-user/most-h-user-1.png')}}" alt="img">
                             </div>
-                            </a>
+                            <div class="user-info">
+                                <h6><a href="forum-profile.html">Zain Siphron</a></h6>
+                                <span>1000 points</span>
+                            </div>
+                            <img class="img-fluid ms-auto" src="{{ asset('/front/img/forum/helpful-user/first.png')}}" alt="">
+                        </div>
+                        <div class="single-user">
+                            <div class="user-img">
+                                <img src="{{ asset('/front/img/forum/helpful-user/most-h-user-2.png')}}" alt="img">
+                            </div>
+                            <div class="user-info">
+                                <h6><a href="forum-profile.html">Corey Saris</a></h6>
+                                <span>900 points</span>
+                            </div>
+                            <img class="img-fluid ms-auto" src="{{ asset('/front/img/forum/helpful-user/second.png')}}" alt="">
+                        </div>
+                        <div class="single-user">
+                            <div class="user-img">
+                                <img src="{{ asset('/front/img/forum/helpful-user/most-h-user-3.png')}}" alt="img">
+                            </div>
+                            <div class="user-info">
+                                <h6><a href="forum-profile.html">Kianna Curtis</a></h6>
+                                <span>850 points</span>
+                            </div>
+                            <img class="img-fluid ms-auto" src="{{ asset('/front/img/forum/helpful-user/third.png')}}" alt="">
+                        </div>
+                        <div class="single-user">
+                            <div class="user-img">
+                                <img src="{{ asset('/front/img/forum/helpful-user/most-h-user-4.png')}}" alt="img">
+                            </div>
+                            <div class="user-info">
+                                <h6><a href="forum-profile.html">Jaxson Dorwart</a></h6>
+                                <span>750 points</span>
+                            </div>
+                        </div>
                     </div>
-
-                    
-
+                </div>
+                <div class="single-widget-box tag-widget mt-40">
+                    <div class="widget-header">
+                        <img src="{{ asset('/front/img/tags-icon.png')}}" alt="icon">
+                        <h5>Tags</h5>
+                    </div>
+                    <div class="widget-content">
+                        <ul class="widget-tag-list-2 list-unstyled">
+                            <li> <a class="tag-jq" href="#">jQuery</a> </li>
+                            <li> <a class="tag-php" href="#">PHP</a> </li>
+                            <li> <a class="tag-wp" href="#">WordPress</a> </li>
+                            <li> <a class="tag-dvlp" href="#">Development</a> </li>
+                            <li> <a class="tag-foram" href="#">Ama</a> </li>
+                            <li> <a class="tag-hlp" href="#">help desk</a> </li>
+                            <li> <a class="tag-js" href="#">JavaScript</a> </li>
+                            <li> <a class="tag-sprt" href="#">support</a> </li>
+                            <li> <a class="tag-ecmrc" href="#">ecommerce</a> </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </section>
 <section class="forum-blog-area pt-100 bg-disable">
     <div class="container">
@@ -307,7 +803,7 @@
                     <div class="blog-content">
                         <div class="blog-info">
                             <div class="post-date">
-                                <img src="img/home_two/calendar-outline.svg" alt="icon">
+                                <img src="{{ asset('/front/img/home_two/calendar-outline.svg')}}" alt="icon">
                                 March 18, 2021
                             </div>
                         </div>
@@ -343,8 +839,8 @@
                 </div>
                 <div class="col-lg-6 text-lg-end text-center order-lg-2 order-1 wow fadeInLeft">
                     <div class="newsletter-img position-relative d-inline-block">
-                        <img src="img/home_three/newsletter-ballon.png" alt="img">
-                        <img src="img/home_three/newsletter-ballon-bg.png" alt="img">
+                        <img src="{{ asset('/front/img/home_three/newsletter-ballon.png')}}" alt="img">
+                        <img src="{{ asset('/front/img/home_three/newsletter-ballon-bg.png')}}" alt="img">
                     </div>
                 </div>
             </div>

@@ -113,7 +113,7 @@
  }
 </script>
 </head>
-  <body data-scroll-animation="true">
+  <body>
     {!! Cmf::site_settings('body_script') !!}
     @include('includes.front-navbar')
     @yield('content')

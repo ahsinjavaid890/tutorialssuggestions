@@ -15,7 +15,7 @@
                     <div class="row gy-3 gy-lg-0 align-items-center">
                         <div class="col-lg-2">
                             <div class="footer-widget pr-20">
-                                <a href="#"> <img src="img/logo-w.png" alt="logo"></a>
+                                <a href="#"> <img src="{{ asset('/front/img/logo-w.png')}}" alt="logo"></a>
                             </div>
                         </div>
 
