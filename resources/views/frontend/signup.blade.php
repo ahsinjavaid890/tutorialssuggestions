@@ -1,6 +1,6 @@
-@extends('layouts.app-2')
+@extends('layouts.app')
 @section('title')
-<title>Signup</title>
+<title>Sign Up</title>
 <meta name="DC.Title" content="Login">
 <meta name="rating" content="general">
 <meta name="description" content="Answerout Login">
@@ -13,63 +13,74 @@
 <meta property="og:locale" content="it_IT">
 @endsection
 @section('content')
-<!-- ========== Login & Registation Section ========== -->
-<div class="bg-login">
-    <div class="bg-white-login">
-        <section class="log-reg">
-    <div class="container">
-      <div class="row justify-content-end">
-        <div class="image image-log" style='z-index: 999999;background-image: url({{ asset("/front/assets/images/shahzad/login-sidebar.png")}});'>
-        </div>
-        <div class="col-lg-6">
-          <div class="align-items-center">
-            <div class="row mt-5 align-items-center">
-              <div class="col-lg-8 offset-md-2 login-right-margin">
+           <section class="banner-area-9 pt-lg-100 pt-55 pb-100 "
+                  style="background-image: url({{ asset('front/img/breadcrumb/banner-bg.png') }});">
+                  <div class="container">
+                      <div class="row pt-90">
+                          <div class=" col-lg-9 doc_banner_content text-center mx-auto">
+                              <h2 class="text-white">Sign Up
+                              </h2>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+               <section class="contact_area sec">
+            <div class="container">
 
-                <div class="row mb-5">
-                  <div class="col-lg-12 text-center">
-                    <!-- Logo -->
-                    <a href="{{url('/')}}"><img src="{{ url('/front/assets/images/logo.svg') }}" class="logo-login" alt="logo"></a>
-                  </div>
-                </div>
-                
-                <div class="row mb-2">
-                  <div class="col-lg-12">
-                    <a href="{{ url('auth/google') }}" class="btn btn-primary btn-google"><img src="{{asset('/front/assets/images/shahzad/google-icon.svg')}}"> Signup with Google</a>
-                  </div>
-                </div>
-                <div class="row mb-2">
-                  <div class="col-lg-12">
-                    <a href="{{ url('auth/facebook') }}" class="btn btn-primary btn-google"><img src="{{asset('/front/assets/images/shahzad/facebook-icon.svg')}}"> Signup with Facebook</a>
-                  </div>
-                </div>
-
-                <div class="row mb-2">
-                    <div class="col-md-12 text-center">
-                        <p class="f-14">Already have an account?</p>
+                <div style="max-width: 500px;" class="mx-auto">
+                    <div class="card card-primary login-card1">
+                        <h1 class="text heading">Sign up</h1>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <a href="#" class="social-button" id="facebook-connect"> <span>Facebook</span></a>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <a href="#" class="social-button" id="google-connect"> <span class="google"> Google
+                                </span></a>
+                            </div>
+                            <div class="col-lg-12">
+                                <hr class="hr-text bor" data-content="OR"></hr>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <label>Username or Email</label>
+                                <input type="text" class="form-control" name="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <label>Pasword</label>
+                                <input type="text" class="form-control" name="">
+                            </div>
+                        </div>
+                         <div class="row">
+                            <div class="form-group">
+                                <label>Confirm Pasword</label>
+                                <input type="text" class="form-control" name="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <input type="checkbox" name=""> Remember Me
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group sign">
+                                <button type="submit" class="btn btn-block btn-primary ">Sign up</button>
+                            </div>
+                        </div>
+                         <div class="row">
+                            <div class="col-sm-6 col-md-6 col-lg-6 rigest ">
+                                <a href="#" class="rigest" >Rigester Now</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-12">
-                      <a href="{{url('/signin')}}" class="btn btn-theme btn-block mb-2">Sign In</a>
-                    </div>
-                  </div>
-
-                <!-- Privacy Policies -->
-                <div class="row mb-2">
-                  <div class="col-md-12 text-center">
-                    <p class="f-14">By signing up, you agree to our <a href="{{ url('terms-and-conditions') }}" class="anchor-color">Terms , Data Policy</a> and <a href="{{ url('cookies-policy') }}" class="anchor-color">Cookies Policy</a> .</p>
-                  </div>
                 </div>
-
-              </div>
+                    
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-    </div>
-</div>
-  
+        </section>
 
-  <!-- ========== Login & Registation Section ========== -->
+
+
 @endsection

@@ -1,4 +1,4 @@
-@extends('layouts.app-2')
+@extends('layouts.app')
 @section('title')
 <title>Login</title>
 <meta name="DC.Title" content="Login">
@@ -13,60 +13,61 @@
 <meta property="og:locale" content="it_IT">
 @endsection
 @section('content')
-<div class="bg-login">
-    <div class="bg-white-login">
-        <section class="log-reg">
-    <div class="container">
-      <div class="row justify-content-end">
-        <div class="image image-log" style='z-index: 999999;background-image: url({{ asset("/front/assets/images/shahzad/login-sidebar-login.png")}});'>
-        </div>
-        <div class="col-lg-6">
-          <div class="align-items-center">
-            <div class="row mt-5 align-items-center">
-              <div class="col-lg-8 offset-md-2 login-right-margin">
-                <div class="row mb-5">
-                  <div class="col-lg-12 text-center">
-                    <!-- Logo -->
-                    <a href="{{url('/')}}"><img src="{{ url('/front/assets/images/logo.svg') }}" class="logo-login" alt="logo"></a>
+           <section class="banner-area-9 pt-lg-100 pt-55 pb-100 "
+                  style="background-image: url({{ asset('front/img/breadcrumb/banner-bg.png') }});">
+                  <div class="container">
+                      <div class="row pt-90">
+                          <div class=" col-lg-9 doc_banner_content text-center mx-auto">
+                              <h2 class="text-white">Sign in
+                              </h2>
+                          </div>
+                      </div>
                   </div>
-                </div>
+              </section>
+               <section class="contact_area sec">
+                  <div class="container">
+                      <div style="max-width: 500px;" class="mx-auto">
+                          <div class="card card-primary login-card">
+                              <h1 class="text heading">Sign In</h1>
+                              <div class="row">
+                                  <div class="col-sm-6 col-md-6 col-lg-6">
+                                      <a href="{{ url('auth/facebook') }}" class="social-button" id="facebook-connect"> <span>Facebook</span></a>
+                                  </div>
+                                  <div class="col-sm-6 col-md-6 col-lg-6">
+                                      <a href="{{ url('auth/google') }}" class="social-button" id="google-connect"> <span class="google"> Google</span></a>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="form-group">
+                                      <label>Username or Email</label>
+                                      <input type="text" class="form-control" name="">
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="form-group">
+                                      <label>Pasword</label>
+                                      <input type="text" class="form-control" name="">
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-sm-6 col-md-6 col-lg-6 " id="Remem">
+                                      <input type="checkbox" name="Remember Me"><span class="rem">Remember Me</span>
+                                  </div>
+                                  <div style="text-align: right;" class="col-sm-6 col-md-6 col-lg-6"  id="Remem">
+                                      <a href="#"> Forgot Your Password?</a>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="form-group">
+                                      <button type="submit" class="btn btn-block btn-primary">Sign In</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                          
+                  </div>
+              </section>
 
-                @include('admin.alert')
-                <div class="row mb-2">
-                    <div class="col-lg-12">
-                      <a href="{{ url('auth/google') }}" class="btn btn-primary btn-google"><img src="{{asset('/front/assets/images/shahzad/google-icon.svg')}}"> Log in with Google</a>
-                    </div>
-                  </div>
-                  <div class="row mb-2">
-                    <div class="col-lg-12">
-                      <a href="{{ url('auth/facebook') }}" class="btn btn-primary btn-google"><img src="{{asset('/front/assets/images/shahzad/facebook-icon.svg')}}"> Log in with Facebook</a>
-                    </div>
-                  </div>
 
-                  <div class="row mb-2">
-                    <div class="col-md-12 text-center">
-                        <p class="f-14">Don’t have an account?</p>
-                    </div>
-                    <div class="col-md-12">
-                      <a href="{{url('/signup')}}" class="btn btn-theme btn-block mb-2">Sign Up</a>
-                    </div>
-                  </div>
-
-                <!-- Privacy Policies -->
-                <div class="row mb-2">
-                  <div class="col-md-12 text-center">
-                    <p class="f-14">By signing In, you agree to our <a href="{{ url('terms-and-conditions') }}" class="anchor-color">Terms , Data Policy</a> and <a href="{{ url('cookies-policy') }}" class="anchor-color">Cookies Policy</a> .</p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-    </div>
-</div>
 
 @endsection
