@@ -11,22 +11,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#5352ed">
     <link rel="shortcut icon" type="image/jpg" href="{{ asset('/front/assets/images/fav.png')}}"/>
-    <link rel="stylesheet" href="{{ asset('/front/assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('/front/assets/css/all.min.css')}}">
-    <!-- <link rel="stylesheet" href="{{ asset('/front/assets/css/animate.css')}}"> -->
-    <!-- <link rel="stylesheet" href="{{ asset('/front/assets/css/flaticon.css')}}"> -->
-    <!-- <link rel="stylesheet" href="{{ asset('/front/assets/css/magnific-popup.css')}}"> -->
-    <link rel="stylesheet" href="{{ asset('/front/assets/css/odometer.css')}}">
-    <link rel="stylesheet" href="{{ asset('/front/assets/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('/front/assets/css/owl.theme.default.min.css')}}">
-    <!-- <link rel="stylesheet" href="{{ asset('/front/assets/css/nice-select.css')}}"> -->
-    <link rel="stylesheet" href="{{ asset('/front/assets/css/jquery.animatedheadline.css')}}">
-    <link rel="stylesheet" href="{{ asset('/front/assets/css/main.css')}}">
-    <link rel="stylesheet" href="{{ asset('/front/assets/css/switch.css')}}">
-    <link rel="stylesheet" href="{{ asset('/front/assets/css/additional.css')}}">
-    <link rel="stylesheet" href="{{ asset('/front/assets/css/responsive.css')}}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ url('/front/assets/images/logo.png') }}">
-    <script src="{{ asset('/front/assets/js/jquery-3.3.1.min.js')}}"></script>
+    
+
+    <link rel="stylesheet" href="{{ asset('front/assets/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('/front/assets/slick/slick.css')}}">
+    <link rel="stylesheet" href="{{ asset('/front/assets/slick/slick-theme.css')}}">
+    <!-- icon css-->
+    <link rel="stylesheet" href="{{ asset('/front/assets/elagent-icon/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('/front/assets/niceselectpicker/nice-select.cs')}}s">
+    <link rel="stylesheet" href="{{ asset('/front/assets/animation/animate.css')}}">
+    <link rel="stylesheet" href="{{ asset('/front/assets/mcustomscrollbar/jquery.mCustomScrollbar.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('/front/css/style-main.css')}}">
+    <link rel="stylesheet" href="{{ asset('/front/css/responsive.css')}}">
+    <script src="{{ asset('/front/js/main.js')}}"></script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js" integrity="sha512-DNeDhsl+FWnx5B1EQzsayHMyP6Xl/Mg+vcnFPXGNjUZrW28hQaa1+A4qL9M+AiOMmkAhKAWYHh1a+t6qxthzUw=="
@@ -115,26 +113,28 @@
  }
 </script>
 </head>
-  <body>
+  <body data-scroll-animation="true">
     {!! Cmf::site_settings('body_script') !!}
     @include('includes.front-navbar')
     @yield('content')
     @include('includes.front-footer')
   </body>
   {!! Cmf::site_settings('footer_script') !!}
-  <script src="{{ asset('/front/assets/js/modernizr-3.6.0.min.js')}}"></script>
-  <script src="{{ asset('/front/assets/js/plugins.js')}}"></script>
-  <script src="{{ asset('/front/assets/js/bootstrap.min.js')}}"></script>
-  <script src="{{ asset('/front/assets/js/heandline.js')}}"></script>
-  <script src="{{ asset('/front/assets/js/isotope.pkgd.min.js')}}"></script>
-  <script src="{{ asset('/front/assets/js/magnific-popup.min.js')}}"></script>
-  <script src="{{ asset('/front/assets/js/owl.carousel.min.js')}}"></script>
-  <script src="{{ asset('/front/assets/js/wow.min.js')}}"></script>
-  <script src="{{ asset('/front/assets/js/countdown.min.js')}}"></script>
-  <script src="{{ asset('/front/assets/js/odometer.min.js')}}"></script>
-  <script src="{{ asset('/front/assets/js/viewport.jquery.js')}}"></script>
-  <script src="{{ asset('/front/assets/js/nice-select.js')}}"></script>
-  <script src="{{ asset('/front/assets/js/main.js')}}"></script>
+
+
+    <script src="{{ asset('/front/js/jquery-3.5.1.min.js')}}"></script>
+    <script src="{{ asset('/front/assets/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ asset('/front/js/pre-loader.js')}}"></script>
+    <script src="{{ asset('/front/assets/slick/slick.min.js')}}"></script>
+    <script src="{{ asset('/front/js/jquery.parallax-scroll.js')}}"></script>
+    <script src="{{ asset('/front/assets/niceselectpicker/jquery.nice-select.min.js')}}"></script>
+    <script src="{{ asset('/front/assets/wow/wow.min.js')}}"></script>
+    <script src="{{ asset('/front/assets/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+    <script src="{{ asset('/front/js/plugins.js')}}"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    
+
+  
   <script  type="text/javascript" src="https://unpkg.com/typeahead.js@0.11.1/dist/typeahead.bundle.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 

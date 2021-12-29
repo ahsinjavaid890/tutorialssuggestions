@@ -1,4 +1,85 @@
+<nav class="navbar navbar-expand-lg  menu_one sticky-nav d-lg-block d-none">
+    <div class="container">
+        <a class="navbar-brand header_logo" href="index.html">
+            <img class="first_logo sticky_logo" src="{{ asset('front/img/logo.png') }}" srcset="img/logo-2x.png 2x" alt="logo">
+            <img class="white_logo main_logo" src="{{ asset('front/img/logo-w.png') }}" srcset="img/logo-w2x.png 2x" alt="logo">
+        </a>
 
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav menu ms-auto">
+                <li class="nav-item dropdown submenu active">
+                    <a href="index.html" class="nav-link dropdown-toggle">Home</a>
+                    
+                </li>
+                <li class="nav-item dropdown submenu">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Pages
+                    </a>
+                    <i class="arrow_carrot-down_alt2 mobile_dropdown_icon" aria-hidden="false"
+                        data-bs-toggle="dropdown"></i>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a href="Layout_Header-Search-1.html" class="nav-link">Header
+                                Layout 01</a></li>
+                        <li class="nav-item"><a href="Layout_Header-Search-2.html" class="nav-link">Header
+                                Layout 02</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                        <li class="nav-item"><a href="typography.html" class="nav-link">Typography</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown submenu">
+                    <a class="nav-link dropdown-toggle" href="forums.html" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Forum
+                    </a>
+                    <i class="arrow_carrot-down_alt2 mobile_dropdown_icon" aria-hidden="false"
+                        data-bs-toggle="dropdown"></i>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a href="forums.html" class="nav-link">Forums Root</a></li>
+                        <li class="nav-item"><a href="forum-topics.html" class="nav-link">Forum Topics</a></li>
+                        <li class="nav-item"><a href="forum-topics-2.html" class="nav-link">Forum Topics Two</a>
+                        </li>
+                        <li class="nav-item"><a href="forum-single.html" class="nav-link">Topic Details</a></li>
+                        <li class="nav-item"><a href="forum-profile.html" class="nav-link">User Profile</a></li>
+                        <li class="nav-item"><a href="add-question.html" class="nav-link">Add Question</a></li>
+                        <li class="nav-item"><a href="user-list.html" class="nav-link">User List</a></li>
+                        <li class="nav-item"><a href="user-details.html" class="nav-link">User Details</a></li>
+                        <li class="nav-item"><a href="badges.html" class="nav-link">User Badges</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown submenu">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Blog
+                    </a>
+                    <i class="arrow_carrot-down_alt2 mobile_dropdown_icon" aria-hidden="false"
+                        data-bs-toggle="dropdown"></i>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item"><a href="blog-grid.html" class="nav-link">Blog Grid</a></li>
+                        <li class="nav-item"><a href="blog-grid-two.html" class="nav-link">Blog Grid Two</a>
+                        </li>
+                        <li class="nav-item"><a href="blog-list.html" class="nav-link">Blog List</a></li>
+                        <li class="nav-item"><a href="blog-single.html" class="nav-link">Blog Details</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="right-nav">
+                <a class="action_btn btn_small_two btn-text-medium" href="signin.html">Sign In</a>
+                <div class="px-2 js-darkmode-btn" title="Toggle dark mode">
+                    <label for="something" class="tab-btn tab-btns">
+                        <ion-icon name="moon"></ion-icon>
+                    </label>
+                    <label for="something" class="tab-btn">
+                        <ion-icon name="sunny"></ion-icon>
+                    </label>
+                    <label class=" ball" for="something"></label>
+                    <input type="checkbox" name="something" id="something" class="dark_mode_switcher">
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
 <!-- <div class="preloader">
     <div class="preloader-inner">
         <div class="preloader-icon">
@@ -9,22 +90,22 @@
 </div> -->
 <!-- ==========Preloader========== -->
 <!-- ==========Overlay========== -->
-<div class="overlay"></div>
+<!-- <div class="overlay"></div>
 <a href="#" class="scrollToTop">
     <i class="fas fa-angle-up"></i>
-</a>
+</a> -->
 <!-- ==========Overlay========== -->
 
 <!-- ==========Overlay========== -->
-<a href="#" class="float d-lg-none">
+<!-- <a href="#" class="float d-lg-none">
     <label class="theme-switch" for="checkbox">
         <input type="checkbox" id="checkbox" />
         <div class="slider round"></div>
     </label>
-</a>
+</a> -->
 
 <!-- ==========Header-Section========== -->
-<header class="header-section mobile-bt-br">
+<!-- <header class="header-section mobile-bt-br">
     <div class="container">
         <div class="header-wrapper">
             <div class="logo">
@@ -122,7 +203,6 @@
             @else
 
               <div class="row zindex-99999 d-lg-none">
-                <!-- <div class="col-1"></div> -->
                 <div class="col-2 col-mb-second-other">
                     <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" href="{{url('/categories')}}"><img style="margin-top:-7px" width="32px;" src="{{asset('front/assets/images/shahzad/search.svg')}}"></a>
                 </div>
@@ -160,7 +240,7 @@
             </div>
         </div>
     </div>
-</header>
+</header> -->
 <script type="text/javascript">
     function clickonsearchnavbar()
     {
