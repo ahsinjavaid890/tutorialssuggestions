@@ -138,10 +138,11 @@ pre[class*="language-"] > code {
   display: block; }
 
 .pt_100 {
-  padding-top: 100px; }
+  padding-bottom: 100px; }
 
 .pb_100 {
-  padding-bottom: 100px; }
+    padding-bottom: 100px;
+}
 
 /** === Scrollbar === **/
 ::-webkit-scrollbar {
@@ -922,6 +923,7 @@ p kbd {
   padding-bottom: 95px; }
 
 .pb-100 {
+  padding-top: 60px;
   padding-bottom: 100px; }
 
 .pb-105 {
