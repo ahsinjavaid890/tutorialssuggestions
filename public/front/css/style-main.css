@@ -7618,6 +7618,7 @@ input[type="number"] {
     -webkit-box-orient: vertical;
     overflow: hidden;
     font-size: 11px;
+    line-height: 2;
 }
 
 
@@ -13080,4 +13081,19 @@ body.body_dark {
 }
 .rem{
   margin-left: 10px;
+}
+.questiontag{
+  display: inline-block;
+  padding: 0.4em 0.5em;
+  margin: 2px 2px 2px 0;
+  font-size: 11px;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  background-color: #071131bf;
+  color: white;
 }
