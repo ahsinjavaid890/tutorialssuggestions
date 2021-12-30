@@ -29,88 +29,262 @@
 </script>
 @endsection
 @section('content')
-<!-- ==========Blog-Page========== -->
-    <section class="blog-page single-blog-page">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <nav aria-label="breadcrumb">
-                      <ol class="breadcrumb">
+<section class="banner-area-7 pt-110 pb-100 has_search">
+
+    <div class="container">
+        <div class="row pt-120 pb-30">
+            <div class="col-lg-9 doc_banner_content search-banner-light text-center mx-auto ">
+
+                <form action="#" class="header_search_form-5 mx-auto">
+                    <div class="header_search_form_info">
+                        <div class="form-group">
+                            <div class="input-wrapper d-flex flex-row">
+                                <input type="search" id="searchbox" autocomplete="off" name="search"
+                                    placeholder="Search for topics, posts, users or categories" />
+                                <button type="submit"><i class="icon_search"></i></button>
+                                <div class="header_search_form_panel">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            Help Desk
+                                            <ul class="list-unstyled search_item">
+                                                <li>
+                                                    <span>Configuration</span><a href="#">How to edit host and
+                                                        port?</a>
+                                                </li>
+                                                <li>
+                                                    <span>Configuration</span><a href="#">The dev Property</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Support
+                                            <ul class="list-unstyled search_item">
+                                                <li>
+                                                    <span>Pages</span><a href="#">The asyncData Method</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Documentation
+                                            <ul class="list-unstyled search_item">
+                                                <li>
+                                                    <span>Getting Started</span><a href="#">The asyncData
+                                                        Method</a>
+                                                </li>
+                                                <li>
+                                                    <span>Getting Started</span><a href="#">The asyncData
+                                                        Method</a>
+                                                </li>
+                                                <li>
+                                                    <span>Getting Started</span><a href="#">The asyncData
+                                                        Method</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header_search_keyword search-white mt-3">
+                        <span class="header-search-form__keywords-label">Popular topics:</span>
+                        <ul class="list-unstyled">
+                            <li class="wow fadeInUp" data-wow-delay="0.2s">
+                                <a href="#">Forums</a>,
+                            </li>
+                            <li></li>
+                            <li class="wow fadeInUp" data-wow-delay="0.3s">
+                                <a href="#">Getting stated</a>,
+                            </li>
+                            <li class="wow fadeInUp" data-wow-delay="0.3s">
+                                <a href="#">Introduction</a>,
+                            </li>
+                            <li class="wow fadeInUp" data-wow-delay="0.4s">
+                                <a href="#">Payment</a>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page_breadcrumb bg-transparent">
+    <div class="container ">
+        <div class="row">
+            <div class="col-sm-7">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                        <li class="breadcrumb-item"><a href="{{url('/blogs')}}">Blog</a></li>
+                        <li class="breadcrumb-item"><a href="{{url('/blogs')}}">Blogs</a></li>
                         @if(isset($categorypage))
                         <li class="breadcrumb-item active" aria-current="page">{{ $categorypage->name }}</li>
                         @endif
-                      </ol>
-                    </nav>
-                </div>
+                    </ol>
+                </nav>
             </div>
-            <div class="row mb-4">
-                <div class="col-md-12">
-                    <div class="top-question-banner">
-                        {!! Cmf::site_settings('question_detail_page_top') !!}
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="row">
+        </div>
+    </div>
+</section>
+<section class="doc_blog_grid_area sec_pad bg-disable">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row">
+
+                    
+
                         @foreach($blogs as $r)
-                           <div class="col-md-6">
-                              <div class="card card-blog-home">
-                                @if(!empty(Cmf::get_image_name('blogimages' , 'blogid' , $r->id)->first()->image_name))
-                                <img class="blog-card-img card-img-top pt-3 pl-3 pr-3" src="{{ url('/images/') }}/{{ Cmf::get_image_name('blogimages' , 'blogid' , $r->id)->first()->image_name }}" width="100%" height="230px" alt="" >
-                                @endif
-                                <div class="card-body">
-                                  <a href="{{ url('') }}/{{ $r->url }}">
-                                    <h1 class="blog-title">{!! Str::limit($r->name) !!}</h1>
-                                  </a>
-                                  <div class="row mt-2">
-                                    <div class="col-5">
-                                      @if(DB::table('wphj_term_relationships')->where('object_id' , $r->id)->count() > 0)
+                    <div class="col-lg-6 col-sm-6">
+                        <div class="blog_grid_post shadow-sm wow fadeInUp">
+                           
+                            <div class="grid_post_content">
+                                <div class="post_tag">
+
+
+                                    @if(DB::table('wphj_term_relationships')->where('object_id' , $r->id)->count() > 0)
 
                                       @foreach(DB::table('wphj_term_relationships')->where('object_id' , $r->id)->get() as $c)
                                       @if(DB::table('blogcategories')->where('id' , $c->term_taxonomy_id)->count() > 0)
-                                      <a class="cat-title-limit" href="{{ url('') }}/{{ DB::table('blogcategories')->where('id' , $c->term_taxonomy_id)->get()->first()->slug }}">  <span class="text-muted"></span> {{DB::table('blogcategories')->where('id' , $c->term_taxonomy_id)->get()->first()->name}} </a>
+                                      <a class="cat-woocommerce" href="{{ url('') }}/{{ DB::table('blogcategories')->where('id' , $c->term_taxonomy_id)->get()->first()->slug }}">  <i class="icon_tag_alt"></i> {{DB::table('blogcategories')->where('id' , $c->term_taxonomy_id)->get()->first()->name}} </a>
 
                                          @endif
                                      @endforeach
                                      @endif
-                                    </div>
-                                    <div class="col-7 text-right">
-                                      <a href="{{ url('') }}/{{ $r->url }}" type="button" class="btn btn-blog-home" name="button">
-                                        read more &nbsp; <img src="{{ url('/front/assets/images/shahzad/arrow-right.png') }}" width="20px" alt="">
-                                      </a>
-                                    </div>
-                                  </div>
+
+                                    
+
+
+
+
                                 </div>
-                              </div>
+                                <a href="{{ url('') }}/{{ $r->url }}">
+                                    <h4 class="b_title">{!! Str::limit($r->name) !!}</h4>
+                                </a>
+                                <div class="media post_author">
+                                    <div class="round_img">
+                                        <img src="img/blog-grid/author_1.jpg" alt="">
+                                    </div>
+                                </div>
                             </div>
-                        @endforeach
+                        </div>
                     </div>
-                    <div class="row mt-2 mb-2">
-                        {!! $blogs->links('frontend.pagination') !!}
+                    @endforeach
+
+                    
+                    
+                    <div class="col-lg-12">
+                        {!! $blogs->links('frontend.newpagination') !!}
+                        
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="widget widget-search">
-                        <h5 class="title">search</h5>
-                        <form class="search-form" method="POST" action="{{ url('blogsearch') }}">
-                            {{ csrf_field() }}
-                            <input name="search" type="text" placeholder="Enter your Search Content" required>
-                            <button type="submit"><i class="flaticon-loupe"></i>Search</button>
-                        </form>
+            </div>
+            <div class="col-lg-4">
+                <div class="blog_sidebar pl-40">
+                    <div class="widget search_widget">
+                        <div class="icon-input-group right-icon">
+                            <input class="form-control" type="text" placeholder="Search">
+                            <i class="icon_search"></i>
+                        </div>
                     </div>
-                    <div class="ads">
-                        {!! Cmf::site_settings('right_add_1') !!}
+                    <div class="widget categorie_widget">
+                        <h4 class="c_head">Post Categories</h4>
+                        <ul class="list-unstyled categorie_list">
+                            <li><a href="#">Creative <span>(12)</span></a></li>
+                            <li><a href="#">Inspiration <span>(8)</span></a></li>
+                            <li><a href="#">Lifestyle <span>(3)</span></a></li>
+                            <li><a href="#">News <span>(4)</span></a></li>
+                            <li><a href="#">Photography <span>(12)</span></a></li>
+                            <li><a href="#">Skill <span>(15)</span></a></li>
+                            <li><a href="#">Tourist Tours <span>(10)</span></a></li>
+                            <li><a href="#">Inspire <span>(5)</span></a></li>
+                        </ul>
                     </div>
-                    <div class="ads" id="sticky-ad">
-                      {!! Cmf::site_settings('right_add_2') !!}
+                    <div class="widget recent_news_widget">
+                        <h4 class="c_head">Reacent News</h4>
+                        <div class="media recent_post_item">
+                            <img src="img/blog-single/news_01.jpg" alt="">
+                            <div class="media-body">
+                                <a href="#">
+                                    <h5>Is It Worth Buying A Premium Form Builder.</h5>
+                                </a>
+                                <div class="entry_post_date">January 14, 2020</div>
+                            </div>
+                        </div>
+                        <div class="media recent_post_item">
+                            <img src="img/blog-single/news_02.jpg" alt="">
+                            <div class="media-body">
+                                <a href="#">
+                                    <h5>10 Classic Summer Vacations</h5>
+                                </a>
+                                <div class="entry_post_date">April 16, 2020</div>
+                            </div>
+                        </div>
+                        <div class="media recent_post_item">
+                            <img src="img/blog-single/news_03.jpg" alt="">
+                            <div class="media-body">
+                                <a href="#">
+                                    <h5>How To Easily Add weForms Widget Using Elementor</h5>
+                                </a>
+                                <div class="entry_post_date">March 10, 2020</div>
+                            </div>
+                        </div>
+                        <div class="media recent_post_item">
+                            <img src="img/blog-single/news_04.jpg" alt="">
+                            <div class="media-body">
+                                <a href="#">
+                                    <h5>How to Create GDPR Consent Form In WordPress</h5>
+                                </a>
+                                <div class="entry_post_date">January 19, 2020</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget tag_widget">
+                        <h4 class="c_head">Tags</h4>
+                        <ul class="list-unstyled w_tag_list">
+                            <li><a href="#">Design</a></li>
+                            <li><a href="#">Apps</a></li>
+                            <li><a href="#">Photography</a></li>
+                            <li><a href="#">Business</a></li>
+                            <li><a href="#">Foram</a></li>
+                            <li><a href="#">WordPress</a></li>
+                            <li><a href="#">Design</a></li>
+                            <li><a href="#">DocAll</a></li>
+                            <li><a href="#">Magento</a></li>
+                            <li><a href="#">Doc Design</a></li>
+                            <li><a href="#">ui/ux</a></li>
+                            <li><a href="#">Docs</a></li>
+                        </ul>
+                    </div>
+                    <div class="widget instragram_widget">
+                        <h4 class="c_head">Instragram</h4>
+                        <div class="instragram_info">
+                            <a href="#" class="instragram_item">
+                                <img src="img/blog-single/image_01.jpg" alt="">
+                            </a>
+                            <a href="#" class="instragram_item">
+                                <img src="img/blog-single/image_02.jpg" alt="">
+                            </a>
+                            <a href="#" class="instragram_item">
+                                <img src="img/blog-single/image_03.jpg" alt="">
+                            </a>
+                            <a href="#" class="instragram_item">
+                                <img src="img/blog-single/image_04.jpg" alt="">
+                            </a>
+                            <a href="#" class="instragram_item">
+                                <img src="img/blog-single/image_05.jpg" alt="">
+                            </a>
+                            <a href="#" class="instragram_item">
+                                <img src="img/blog-single/image_06.jpg" alt="">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+<!-- ==========Blog-Page========== -->
     <!-- ==========Blog-Page========== -->
 <script type="text/javascript">
     function submitbutton()
