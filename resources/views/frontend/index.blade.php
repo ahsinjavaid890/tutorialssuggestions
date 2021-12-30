@@ -784,47 +784,122 @@
     </div>
 </div>
 </section>
-<section class="forum-blog-area pt-100 bg-disable">
-    <div class="container">
-        <h2 class="section-title-h2 mb-60 text-center wow fadeInUp">Ama Blogs</h2>
-        <div class="row gy-4 gy-lg-0 justify-content-center">
-            <?php $count = 0; ?>
-          @foreach($blogs as $r)
-          @if(!empty(Cmf::get_image_name('blogimages' , 'blogid' , $r->id)->first()->image_name))
-            <div class="col-lg-4 col-sm-6 wow fadeInUp">
-                <div class="single-forum-blog-widget">
-                    <div class="blog-img">
-
-                        @if(!empty(Cmf::get_image_name('blogimages' , 'blogid' , $r->id)->first()->image_name))
-                        <img  src="{{ url('/images/') }}/{{ Cmf::get_image_name('blogimages' , 'blogid' , $r->id)->first()->image_name }}"  alt="" >
-                        @endif
-                    </div>
-
-                    <div class="blog-content">
-                        <div class="blog-info">
-                            <div class="post-date">
-                                <img src="{{ asset('/front/img/home_two/calendar-outline.svg')}}" alt="icon">
-                                March 18, 2021
+ <section class="call-to-action cta-bg-3">
+            <div class="bg-shapes">
+                <div class="shape">
+                    <img data-parallax='{"x": -50, "y": 0, "rotateZ":0}' src="{{ asset('/front/img/home_three/cta-shape-1.png')}}" alt="">
+                </div>
+                <div class="shape">
+                    <img data-parallax='{"x": 100, "y": 0, "rotateZ":0}' src="{{ asset('/front/img/home_three/cta-shape-2.png')}}" alt="">
+                </div>
+              
+            </div>
+            <div class="container">
+                <div class="row action-content-wrapper justify-content-between gy-4 gy-lg-0">
+                    <div class="col-lg-8 mt-0">
+                        <div class="action-title-wrap title-img d-block d-sm-flex">
+                            <img src="img/home_three/cta-emo.png" alt="">
+                            <div>
+                                <h2 class="action-title">New to Communities?</h2>
+                                <p>Its members are ambitious local authorities and development corporations planning and
+                                    delivering exemplary</p>
                             </div>
                         </div>
-                        <h5><a href="{{ url('') }}/{{ $r->url }}">{!! Str::limit($r->name) !!}</a>
-                        </h5>
+                    </div>
+                    <div class="col-lg-4 text-lg-end text-center">
+                        <a href="add-question.html" class="action_btn">Ask a Question </a>
                     </div>
                 </div>
             </div>
-             @endif
-            @endforeach
-        </div>
-        <div class="text-center mt-70">
-            <a href="#" class="dbl-arrow-upper show-more-btn wow fadeInUp">
-                <div class="arrow-cont">
-                    <i class="arrow_carrot-down first"></i>
-                    <i class="arrow_carrot-down second"></i>
-                </div> Show More
-            </a>
-        </div>
+        </section>
+          <section class="client-testimonial-area pt-105">
+            <div class="container">
+                <h2 class="section-title-h2 text-center wow fadeInUp">What Our Users Say</h2>
 
-
+                <div class="client-testimonial-slider">
+                    <div class="client-testimonial-widget wow fadeInUp">
+                        <div class="widget-header">
+                            <img src="{{ asset('/front/img/home_three/client-1.png')}}" alt="">
+                            <div class="client-info">
+                                <h6 class="c-name">Moshrarf Hossan</h6>
+                                <span class="c-pos">Ui / Ux Designer</span>
+                            </div>
+                        </div>
+                        <div class="widget-content">
+                            <p>Assertively procrastinate distributed relationships whereas equity invested
+                                intellectual capital everything</p>
+                        </div>
+                    </div>
+                    <div class="client-testimonial-widget wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="widget-header">
+                            <img src="{{ asset('/front/img/home_three/client-2.png')}}" alt="">
+                            <div class="client-info">
+                                <h6 class="c-name">Alfredo Mango</h6>
+                                <span class="c-pos">Ui / Ux Designer</span>
+                            </div>
+                        </div>
+                        <div class="widget-content">
+                            <p>Assertively procrastinate distributed relationships whereas equity invested
+                                intellectual capital everything</p>
+                        </div>
+                    </div>
+                    <div class="client-testimonial-widget wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="widget-header">
+                            <img src="{{ asset('/front/img/home_three/client-3.png')}}" alt="">
+                            <div class="client-info">
+                                <h6 class="c-name">Eh Jewel</h6>
+                                <span class="c-pos">Ui / Ux Designer</span>
+                            </div>
+                        </div>
+                        <div class="widget-content">
+                            <p>Assertively procrastinate distributed relationships whereas equity invested
+                                intellectual capital everything</p>
+                        </div>
+                    </div>
+                    <div class="client-testimonial-widget wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="widget-header">
+                            <img src="{{ asset('/front/img/home_three/client-1.png')}}" alt="">
+                            <div class="client-info">
+                                <h6 class="c-name">Moshrarf Hossan</h6>
+                                <span class="c-pos">Ui / Ux Designer</span>
+                            </div>
+                        </div>
+                        <div class="widget-content">
+                            <p>Assertively procrastinate distributed relationships whereas equity invested
+                                intellectual capital everything</p>
+                        </div>
+                    </div>
+                    <div class="client-testimonial-widget wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="widget-header">
+                            <img src="{{ asset('/front/img/home_three/client-2.png')}}" alt="">
+                            <div class="client-info">
+                                <h6 class="c-name">Alfredo Mango</h6>
+                                <span class="c-pos">Ui / Ux Designer</span>
+                            </div>
+                        </div>
+                        <div class="widget-content">
+                            <p>Assertively procrastinate distributed relationships whereas equity invested
+                                intellectual capital everything</p>
+                        </div>
+                    </div>
+                    <div class="client-testimonial-widget wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="widget-header">
+                            <img src="{{ asset('/front/img/home_three/client-3.png')}}" alt="">
+                            <div class="client-info">
+                                <h6 class="c-name">Eh Jewel</h6>
+                                <span class="c-pos">Ui / Ux Designer</span>
+                            </div>
+                        </div>
+                        <div class="widget-content">
+                            <p>Assertively procrastinate distributed relationships whereas equity invested
+                                intellectual capital everything</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<section class="forum-blog-area pt-100 bg-disable">
+    <div class="container">
         <div class="newsletter-form-widget">
             <div class="row gy-lg-0 gy-3">
                 <div class="col-lg-6 order-lg-1 order-2 wow fadeInRight pe-lg-0">

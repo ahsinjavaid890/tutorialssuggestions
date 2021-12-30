@@ -23,8 +23,9 @@
     <link rel="stylesheet" href="{{ asset('/front/assets/mcustomscrollbar/jquery.mCustomScrollbar.min.css')}}">
     <link rel="stylesheet" href="{{ asset('/front/css/style-main.css')}}">
     <link rel="stylesheet" href="{{ asset('/front/css/responsive.css')}}">
+    <script src="{{ asset('/front/js/jquery-3.5.1.min.js')}}"></script>
     <script src="{{ asset('/front/js/main.js')}}"></script>
-
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js" integrity="sha512-DNeDhsl+FWnx5B1EQzsayHMyP6Xl/Mg+vcnFPXGNjUZrW28hQaa1+A4qL9M+AiOMmkAhKAWYHh1a+t6qxthzUw=="
@@ -122,7 +123,7 @@
   {!! Cmf::site_settings('footer_script') !!}
 
 
-    <script src="{{ asset('/front/js/jquery-3.5.1.min.js')}}"></script>
+    
     <script src="{{ asset('/front/assets/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{ asset('/front/js/pre-loader.js')}}"></script>
     <script src="{{ asset('/front/assets/slick/slick.min.js')}}"></script>
