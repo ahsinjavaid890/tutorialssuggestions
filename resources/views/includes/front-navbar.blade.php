@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg  menu_one sticky-nav d-lg-block d-none">
     <div class="container">
-        <a class="navbar-brand header_logo" href="index.html">
+        <a class="navbar-brand header_logo" href="{{ url('') }}">
             <img class="first_logo sticky_logo" src="{{ asset('front/img/logo.png') }}" srcset="img/logo-2x.png 2x" alt="logo">
             <img class="white_logo main_logo" src="{{ asset('front/img/logo-w.png') }}" srcset="img/logo-w2x.png 2x" alt="logo">
         </a>
@@ -8,65 +8,22 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav menu ms-auto">
-                <li class="nav-item dropdown submenu active">
-                    <a href="index.html" class="nav-link dropdown-toggle">Home</a>
+                <li class="nav-item active">
+                    <a href="{{ url('') }}" class="nav-link dropdown-toggle">Home</a>
                     
                 </li>
-                <li class="nav-item dropdown submenu">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Pages
-                    </a>
-                    <i class="arrow_carrot-down_alt2 mobile_dropdown_icon" aria-hidden="false"
-                        data-bs-toggle="dropdown"></i>
-                    <ul class="dropdown-menu">
-                        <li class="nav-item"><a href="Layout_Header-Search-1.html" class="nav-link">Header
-                                Layout 01</a></li>
-                        <li class="nav-item"><a href="Layout_Header-Search-2.html" class="nav-link">Header
-                                Layout 02</a></li>
-                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                        <li class="nav-item"><a href="typography.html" class="nav-link">Typography</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a href="{{ url('blogs') }}" class="nav-link dropdown-toggle">Blogs</a>
+                    
                 </li>
-                <li class="nav-item dropdown submenu">
-                    <a class="nav-link dropdown-toggle" href="forums.html" role="button"
-                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Forum
-                    </a>
-                    <i class="arrow_carrot-down_alt2 mobile_dropdown_icon" aria-hidden="false"
-                        data-bs-toggle="dropdown"></i>
-                    <ul class="dropdown-menu">
-                        <li class="nav-item"><a href="forums.html" class="nav-link">Forums Root</a></li>
-                        <li class="nav-item"><a href="forum-topics.html" class="nav-link">Forum Topics</a></li>
-                        <li class="nav-item"><a href="forum-topics-2.html" class="nav-link">Forum Topics Two</a>
-                        </li>
-                        <li class="nav-item"><a href="forum-single.html" class="nav-link">Topic Details</a></li>
-                        <li class="nav-item"><a href="forum-profile.html" class="nav-link">User Profile</a></li>
-                        <li class="nav-item"><a href="add-question.html" class="nav-link">Add Question</a></li>
-                        <li class="nav-item"><a href="user-list.html" class="nav-link">User List</a></li>
-                        <li class="nav-item"><a href="user-details.html" class="nav-link">User Details</a></li>
-                        <li class="nav-item"><a href="badges.html" class="nav-link">User Badges</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown submenu">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Blog
-                    </a>
-                    <i class="arrow_carrot-down_alt2 mobile_dropdown_icon" aria-hidden="false"
-                        data-bs-toggle="dropdown"></i>
-                    <ul class="dropdown-menu">
-                        <li class="nav-item"><a href="blog-grid.html" class="nav-link">Blog Grid</a></li>
-                        <li class="nav-item"><a href="blog-grid-two.html" class="nav-link">Blog Grid Two</a>
-                        </li>
-                        <li class="nav-item"><a href="blog-list.html" class="nav-link">Blog List</a></li>
-                        <li class="nav-item"><a href="blog-single.html" class="nav-link">Blog Details</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a href="{{ url('ask') }}" class="nav-link dropdown-toggle">Ask Question?</a>
+                    
                 </li>
             </ul>
             <div class="right-nav">
-                <a class="action_btn btn_small_two btn-text-medium" href="signin.html">Sign In</a>
-                <div class="px-2 js-darkmode-btn" title="Toggle dark mode">
+                <a class="action_btn btn_small_two btn-text-medium" href="{{ url('signin') }}">Sign In</a>
+                <!-- <div class="px-2 js-darkmode-btn" title="Toggle dark mode">
                     <label for="something" class="tab-btn tab-btns">
                         <ion-icon name="moon"></ion-icon>
                     </label>
@@ -75,7 +32,7 @@
                     </label>
                     <label class=" ball" for="something"></label>
                     <input type="checkbox" name="something" id="something" class="dark_mode_switcher">
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
