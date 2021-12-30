@@ -135,9 +135,10 @@
                                                         <input type="text"  class="form-control" placeholder="Phone No" name="phonenumber">
                                                     </div>
                                                 </div> 
-                                                 <div class="col-md-6">
+                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <textarea></textarea>
+                                                        <label>About Info</label>
+                                                        <textarea class="form-control"></textarea>
                                                     </div>
                                                 </div> 
                                             </div> 
