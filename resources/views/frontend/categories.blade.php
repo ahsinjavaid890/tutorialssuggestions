@@ -30,64 +30,36 @@
 @endsection
 @section('content')
 
- <section class="banner-area-9 pt-lg-100 pt-55 pb-100 "
+<section class="banner-area-9 pt-lg-100 pt-55 pb-100 "
             style="background-image: url(img/breadcrumb/banner-bg.png);">
-            <div class="container">
-                <div class="row pt-90">
-                    <div class=" col-lg-9 doc_banner_content text-center mx-auto">
-                        <h2 class="text-white"><span class="banner-title-h1 mb-2">Categories</span>
-                        </h2>
-                        
+    <div class="container">
+        <div class="row pt-90">
+            <div class=" col-lg-9 doc_banner_content text-center mx-auto">
+                <h2 class="text-white"><span class="banner-title-h1 mb-2">Categories</span>
+                </h2>
+                
 
-                    </div>
-                </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
 <section class="forum-category-area pt-100 bg-disable pb-lg-115 pb-100">
     <div class="container">
-        <h2 class="section-title-h2 text-center mb-60 text-center wow fadeinUp">Amas Categories</h2>
         <div class="row gy-lg-0 gy-4 justify-content-center">
+            @foreach($data as $r)
             <div class="col-custom wow fadeInUp">
-                <a href="#">
+                <a href="{{ url('') }}/{{ $r->url }}">
                     <div class="single-category-widget">
-                        <img src="{{ asset('/front/img/home_three/forum-catagory-01.svg')}}" alt="icon">
-                        <h5>Getting started</h5>
+                        @if(!empty(Cmf::get_image_name('subjectimages' , 'subjectid' , $r->id)->first()->image_name))
+                            <img src="{{ url('/images/') }}/{{ Cmf::get_image_name('subjectimages' , 'subjectid' , $r->id)->first()->image_name }}" alt="icon">
+                        @endif
+                        
+                        <h5>{{ $r->name }}</h5>
                     </div>
                 </a>
             </div>
-            <div class="col-custom wow fadeInUp" data-wow-delay="0.3s">
-                <a href="#">
-                    <div class="single-category-widget">
-                        <img src="{{ asset('/front/img/home_three/forum-catagory-02.svg')}}" alt="icon">
-                        <h5>Announcements</h5>
-                    </div>
-                </a>
-            </div>
-            <div class="col-custom wow fadeInUp" data-wow-delay="0.5s">
-                <a href="#">
-                    <div class="single-category-widget">
-                        <img src="{{ asset('/front/img/home_three/forum-catagory-03.svg')}}" alt="icon">
-                        <h5>Authors</h5>
-                    </div>
-                </a>
-            </div>
-            <div class="col-custom wow fadeInUp" data-wow-delay="0.7s">
-                <a href="#">
-                    <div class="single-category-widget">
-                        <img src="{{ asset('/front/img/home_three/forum-catagory-04.svg')}}" alt="icon">
-                        <h5>Customers</h5>
-                    </div>
-                </a>
-            </div>
-            <div class="col-custom wow fadeInUp" data-wow-delay="0.9s">
-                <a href="#">
-                    <div class="single-category-widget">
-                        <img src="{{ asset('/front/img/home_three/forum-catagory-05.svg')}}" alt="icon">
-                        <h5>Technology</h5>
-                    </div>
-                </a>
-            </div>
+            @endforeach
 
 
         </div>
