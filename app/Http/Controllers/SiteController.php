@@ -79,7 +79,7 @@ class SiteController extends Controller
         $modalname = $url->modulename;
         if($modalname == "allcategories")
         {
-          $data = categories::where('status' , 'Active')->whereNotNull('order')->orderBy('order', 'asc')->get();
+          $data = categories::where('status' , 'Active')->whereNotNull('order')->orderBy('id', 'asc')->get();
           return view('frontend.categories')->with(array('data'=>$data));
         }
         elseif ($modalname == "category") {

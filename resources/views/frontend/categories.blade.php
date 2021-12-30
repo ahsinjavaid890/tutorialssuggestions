@@ -42,7 +42,7 @@
         </div>
     </div>
 </section>
-<section class="forum-category-area pt-100 bg-disable pb-lg-115 pb-100">
+<section class="forum-category-area  bg-disable pb-lg-115 pb-100">
     <div class="container">
         <div class="row gy-lg-0 gy-4 justify-content-center">
             @foreach($data as $r)
@@ -54,7 +54,7 @@
                         @endif
                         
                         <h5>{{ $r->name }}</h5>
-                        <p>{{ $r->color }}</p>
+                        <p>{{ $r->backgroundcolor }}</p>
                     </div>
                 </a>
             </div>

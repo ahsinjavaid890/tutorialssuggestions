@@ -7602,26 +7602,34 @@ input[type="number"] {
 .forum-category-area .col-custom {
   width: 20%; }
 .forum-category-area .single-category-widget {
+  margin-top: 45px;
   box-shadow: 0px 1.6px 3.5px 0px #334d7226, 0px 0.5px 1px 0px #334d721a;
-  background-color: #fff;
-  border-radius: 10px;
-  text-align: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  transition: all 0.3s ease-out; }
+  padding: 10px;
+  color: black;
+    background-color: #fff;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: all 0.3s ease-out;
+}
+
+.forum-category-area .single-category-widget p{
+      display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 11px;
+}
+
+
+
   .forum-category-area .single-category-widget:hover {
     box-shadow: 0px 20px 45px 0px #334d7226; }
     .forum-category-area .single-category-widget:hover h5 {
       color: var(--brand_color) !important; }
   .forum-category-area .single-category-widget h5 {
-    font-size: 15px;
+        font-size: 15px;
     font-weight: 500;
-    line-height: 0px;
     color: #171d24;
-    text-align: left;
-    margin-bottom: 0;
-    padding-left: 16px;
-    margin-top: 0px;
     transition: all 0.3s ease-out; }
 
 /*=========== Forum Post Widget css ==========*/
