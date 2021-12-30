@@ -41,7 +41,8 @@
                         <div class="input-wrapper">
                             <i class="icon_search"></i>
                             <input type='search' id="searchbox" autocomplete="off" name="search"
-                                placeholder="Find your query">
+                                placeholder="Find your query"
+                                >
 
                             <div class="header_search_form_panel">
                                 <ul class="list-unstyled">

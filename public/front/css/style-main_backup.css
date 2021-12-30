@@ -18707,3 +18707,8 @@ body.body_dark .sticky_menu .menu>.nav-item.submenu .dropdown-menu .nav-item .na
     text-align: right;
     width: 475px;
 }
+.profile-circle-img {
+    width: 30px;
+    border-radius: 50px;
+    
+}

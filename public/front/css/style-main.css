@@ -13099,3 +13099,8 @@ body.body_dark {
   background-color: #071131bf;
   color: white;
 }
+.profile-circle-img {
+    width: 30px;
+    border-radius: 50px;
+    
+}
