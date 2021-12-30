@@ -29,17 +29,61 @@
 </script>
 @endsection
 @section('content')
+
 <section class="banner-area-9 pt-lg-100 pt-55 pb-100 "
             style="background-image: url(img/breadcrumb/banner-bg.png);">
     <div class="container">
-        <div class="row pt-90">
-            <div class=" col-lg-9 doc_banner_content text-center mx-auto">
-                <h2 class="text-white"><span class="banner-title-h1 mb-2">Categories</span>
-                </h2>
-                
+         <div class="row">
+        <div class="col-lg-9 doc_banner_content search-banner-light text-center mx-auto pt-20">
+            <h1 class="banner-title-h1 mb-4">Find your query</h1>
+            <form action="#" class="header_search_form-2 mx-auto">
+                <div class="header_search_form_info">
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <i class="icon_search"></i>
+                            <input type='search' id="searchbox" autocomplete="off" name="search"
+                                placeholder="Find your query" />
 
-            </div>
+                            <div class="header_search_form_panel">
+                                <ul class="list-unstyled">
+                                    <li>Help Desk
+                                        <ul class="list-unstyled search_item">
+                                            <li><span>Configuration</span><a href="#">How to edit host and
+                                                    port?</a></li>
+                                            <li><span>Configuration</span><a href="#">The dev Property</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>Support
+                                        <ul class="list-unstyled search_item">
+                                            <li><span>Pages</span><a href="#">The asyncData Method</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>Documentation
+                                        <ul class="list-unstyled search_item">
+                                            <li><span>Getting Started</span><a href="#">The asyncData
+                                                    Method</a>
+                                            </li>
+                                            <li><span>Getting Started</span><a href="#">The asyncData
+                                                    Method</a>
+                                            </li>
+                                            <li><span>Getting Started</span><a href="#">The asyncData
+                                                    Method</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </form>
+
+
         </div>
+    </div>
     </div>
 </section>
 <section class="forum-category-area  bg-disable pb-lg-115 pb-100">
