@@ -1556,7 +1556,7 @@ p kbd {
   color: #fff;
   box-shadow: 0 20px 30px 0 rgba(17, 166, 131, 0.24);
   border-radius: 4px;
-  background: var(--brand_color);
+  background:#140f4d;
   display: inline-block;
   padding: 14px 28px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.18s ease-in-out; }
@@ -5840,7 +5840,7 @@ p kbd {
 .action_btn.btn_radious_none,
 .action_btn.btn_radious_45 {
   box-shadow: none;
-  border: 2px solid var(--brand_color);
+  border: 2px solid #140f4d;
   transition: all 0.3s linear; }
   .action_btn.btn_small:hover,
   .action_btn.btn_small_two:hover,
@@ -9907,9 +9907,9 @@ blockquote {
   .pagination .page-numbers + .page-numbers {
     margin-left: 10px; }
   .pagination .page-numbers:hover, .pagination .page-numbers.current {
-    background-color: var(--brand_color);
-    border-color: var(--brand_color);
-    box-shadow: 0 20px 30px 0 rgba(17, 166, 131, 0.24);
+    background-color: #140f4d;
+    border-color: #140f4d;
+    box-shadow: 0 20px 30px 0 rgba(20, 15, 77, 1);
     color: #fff; }
   .pagination .page-numbers.current {
     box-shadow: none; }
