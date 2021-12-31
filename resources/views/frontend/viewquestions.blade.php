@@ -1,4 +1,4 @@
-@foreach($data as $r)
+@foreach($answerquestionsview as $r)
 @php
     $user = $r->question_auther;
 @endphp

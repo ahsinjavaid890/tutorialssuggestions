@@ -53,13 +53,10 @@ class SiteController extends Controller
             return redirect()->route('admin.dashboard');
         }
     }
-     $blogcategories = blogcategories::where('delete_status' , 'Active')->where('visible_status'  ,'Published')->limit(3000)->get();
-
-      $blogs = DB::table('blogimages')->groupby('image_name')->leftJoin('blogs', 'blogimages.blogid', '=', 'blogs.id')->limit(12)->get();
-
-      $categories = categories::where('status' , 'Active')->get();
-      $testimonials = testimonials::where('status' ,'Published')->get();
-      return view('frontend.index')->with(array('testimonials'=>$testimonials,'categories'=>$categories,'blogcategories'=>$blogcategories,'blogs'=>$blogs));
+     $answerquestionsview = answerquestions::where('delete_status' , 'Active')->where('visible_status' , 'Published')->orderby('id' ,'desc')->limit(20)->get();
+     $categories = categories::where('status' , 'Active')->where('homepage' , 1)->limit(15)->orderby('id' , 'desc')->get();
+     $testimonials = testimonials::where('status' ,'Published')->get();
+     return view('frontend.index')->with(array('testimonials'=>$testimonials,'categories'=>$categories,'answerquestionsview'=>$answerquestionsview));
    }
 
    public function checkurl($id)
@@ -95,7 +92,7 @@ class SiteController extends Controller
                     $user->save();
                 }
            }
-           return view('frontend.explore')->with(array('data'=>$data,'category'=>$category));
+           return view('frontend.explore')->with(array('answerquestionsview'=>$data,'category'=>$category));
         }
         elseif ($modalname == "admin") {
            $this->adminlogin();
