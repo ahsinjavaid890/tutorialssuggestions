@@ -83,7 +83,7 @@ body {
   outline: none; }
 
 a {
-  color: var(--brand_color); }
+  color: #4a6ee0; }
 
 h1,
 h2,
@@ -7712,7 +7712,7 @@ input[type="number"] {
         color: #171d24; }
     .single-forum-post-widget .post-title i {
       font-size: 15px;
-      color: #2ed83f;
+      color:#4a6ee0;
       vertical-align: middle;
       margin-left: 6px; }
   .single-forum-post-widget .post-info {

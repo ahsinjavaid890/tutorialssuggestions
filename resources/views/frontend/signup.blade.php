@@ -45,22 +45,25 @@
                         <form id="regForm" method="POST" action="{{ route('register') }}">
                             @csrf
                             <label class="form-group has-float-label mb-4">
+                                 <span>Full name</span>
                                 <input value="{{ old('name') }}" type="text" class="form-control" name="name" placeholder="Full Name" >
-                                <span>Full name</span>
+                               
                             </label>
                             @error('name')
                                 <div style="color: red">{{ $message }}</div>
                             @enderror
                             <label class="form-group has-float-label mb-4">
+                                 <span>E-mail</span>
                                 <input value="{{ old('email') }}" type="email" class="form-control" name="email" placeholder="Email Address" >
-                                <span>E-mail</span>
+                               
                             </label>
                             @error('email')
                                 <div style="color: red">{{ $message }}</div>
                             @enderror
                             <label class="form-group has-float-label mb-4">
+                                 <span>Password</span>
                                 <input type="password" class="form-control" name="password" placeholder="Create a Password">
-                                <span>Password</span>
+                               
                             </label>
                             @error('password')
                                 <div style="color: red">{{ $message }}</div>
