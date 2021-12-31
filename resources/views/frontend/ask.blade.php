@@ -15,178 +15,57 @@
 <script src="{{ asset('/front/assets/summernote/summernote-bs4.min.js') }}"></script>
 @endsection
 @section('content')
-<!-- include libraries(jQuery, bootstrap) -->
-<!-- include summernote css/js -->
-<!-- <section class="profile-section single-community">
-    <div class="container-fluid p-0">
-        <div class="bg-new-question" style='background-image: url({{ asset("/front/assets/images/shahzad/ask-question-bg-2.png")}});'>
-            <div class="row p-mb-4">
-                <div class="col-md-6 offset-md-3">
-                    <div class="mt-100"></div>
-                    @include('admin.alert')
-                    <div class="row mt-3 mb-4">
-                        <div class="col-md-12">
-                            <h1 class="f-20 ask-text">Ask your question and get your answers by experts.</h1>
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card card-ask">
-                                <div class="card-body">
-                                    <form id="askquestionformsubmit" enctype="multipart/form-data" method="POST" action="{{ url('createquestionuser') }}">
-                                        {{ csrf_field() }}
-                                        <div class="row mb-3">
-                                            <div class="col-md-12">
-                                                <label class="text-black f-weight-500">Question Title</label>
-                                                <input required="" type="text" class="form-control input-ask" placeholder="" name="question_name">
-                                                <label class="text-black mt-2 f-weight-500">Write a detailed answer</label>
-                                                <textarea id="summernote" name="question_content" placeholder="" rows="5"></textarea>
-                                            </div>
-                                        </div>
+<section class="banner-area-7 pt-20 pb-80 has_search">
 
-                                        <div class="row">
-                                            <div class="col-md-9">
-                                                <p id="files-area">
-                                                    <span id="filesList">
-                                                        <span id="files-names"></span>
-                                                    </span>
-                                                </p>
-                                                <div class="g-recaptcha"
-                                                    data-sitekey="{{config('services.recaptcha.key')}}">
-                                                </div>
-                                                <div style="color:red;" id="captchaerror"></div>
-                                            </div>
-                                            <div class="col-md-3 text-right">
-                                                <input accept="image/png, image/gif, image/jpeg"  multiple="" name="question_image[]" type="file" id="upload" hidden/>
-                                                <label class="file-upload" for="upload" title="Upload photos (optional)"><small>Add Media</small> <img width="20px" src="{{asset('/front/assets/images/shahzad/camera.svg')}}"></label>
-                                            </div>
-                                        </div>
+<div class="container">
+<div class="row pt-120 pb-30">
+<div class="col-lg-9 doc_banner_content search-banner-light text-center mx-auto pt-20">
+<h1 class="banner-title-h1 mb-4">Ask Qusetions</h1>
+<form action="#" class="header_search_form-2 mx-auto">
+<div class="header_search_form_info">
+  <div class="form-group">
+      <div class="input-wrapper">
+          <i class="icon_search"></i>
+          <input type='search' id="searchbox" autocomplete="off" name="search"
+              placeholder="Search the Doc">
 
-
-                                </div>
-                            </div>
-
-                            <div class="row mt-3">
-                                <div class="col-md-3 col-12 text-center">
-                                    <p class="ask-text mt-1 pt-2"> <b>Subject -</b></p>
-                                </div>
-                                <div class="col-md-5 col-12 mb-2">
-                                    <select name="question_subject" id="selec-color-dark" class="form-control subject-rounded input-lg" required="">
-                                        <option value="">Select Subject</option>
-                                        @foreach($categories as $r)
-                                        <option value="{{ $r->name }}">{{ $r->name }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div class="col-md-4 col-12">
-                                    <button class="btn btn-white-mine btn-block p-3">Submit Now <img width="27px" src="{{asset('/front/assets/images/shahzad/arrow-circle.png')}}"> </button>
-                                </div>
-                            </div>
-                            </form>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-    <section class="banner-area-7 pt-20 pb-80 has_search">
-      <div class="banner-shapes">
-        <div class="shape">
-          <img data-parallax='{"x": 50, "y": 0, "rotateZ":0}' src="img/add-question/banner-shape-1.png" alt="shape" />
-        </div>
-        <div class="shape">
-          <img data-parallax='{"x": 50, "y": 0, "rotateZ":0}' src="img/add-question/banner-shape-2.png" alt="shape" />
-        </div>
-        <div class="shape">
-          <img data-parallax='{"x": 50, "y": 0, "rotateZ":0}' src="img/add-question/banner-shape-3.png" alt="shape" />
-        </div>
-        <div class="shape">
-          <img data-parallax='{"x": 50, "y": 0, "rotateZ":0}' src="img/add-question/banner-shape-4.png" alt="shape" />
-        </div>
-      </div>
-      <div class="container">
-        <div class="row pt-120 pb-30">
-          <div class="
-                col-lg-9
-                doc_banner_content
-                search-banner-light
-                text-center
-                mx-auto
-                pt-20
-              ">
-            <h1 class="banner-title-h1 mb-4">Ask Questions</h1>
-            <form action="#" class="header_search_form-5 mx-auto">
-              <div class="header_search_form_info">
-                <div class="form-group">
-                  <div class="input-wrapper d-flex flex-row">
-                    <input type="search" id="searchbox" autocomplete="off" name="search"
-                      placeholder="Search for topics, posts, users or categories" />
-                    <button type="submit"><i class="icon_search"></i></button>
-                    <div class="header_search_form_panel">
-                      <ul class="list-unstyled">
-                        <li>
-                          Help Desk
-                          <ul class="list-unstyled search_item">
-                            <li>
-                              <span>Configuration</span><a href="#">How to edit host and port?</a>
-                            </li>
-                            <li>
-                              <span>Configuration</span><a href="#">The dev Property</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          Support
-                          <ul class="list-unstyled search_item">
-                            <li>
-                              <span>Pages</span><a href="#">The asyncData Method</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          Documentation
-                          <ul class="list-unstyled search_item">
-                            <li>
-                              <span>Getting Started</span><a href="#">The asyncData Method</a>
-                            </li>
-                            <li>
-                              <span>Getting Started</span><a href="#">The asyncData Method</a>
-                            </li>
-                            <li>
-                              <span>Getting Started</span><a href="#">The asyncData Method</a>
-                            </li>
-                          </ul>
-                        </li>
+          <div class="header_search_form_panel">
+              <ul class="list-unstyled">
+                  <li>Help Desk
+                      <ul class="list-unstyled search_item">
+                          <li><span>Configuration</span><a href="#">How to edit host and
+                                  port?</a></li>
+                          <li><span>Configuration</span><a href="#">The dev Property</a>
+                          </li>
                       </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="header_search_keyword search-white mt-3">
-                <span class="header-search-form__keywords-label">Popular topics:</span>
-                <ul class="list-unstyled">
-                  <li class="wow fadeInUp" data-wow-delay="0.2s">
-                    <a href="#">Forums</a>,
                   </li>
-                  <li></li>
-                  <li class="wow fadeInUp" data-wow-delay="0.3s">
-                    <a href="#">Getting stated</a>,
+                  <li>Support
+                      <ul class="list-unstyled search_item">
+                          <li><span>Pages</span><a href="#">The asyncData Method</a></li>
+                      </ul>
                   </li>
-                  <li class="wow fadeInUp" data-wow-delay="0.3s">
-                    <a href="#">Introduction</a>,
+                  <li>Documentation
+                      <ul class="list-unstyled search_item">
+                          <li><span>Getting Started</span><a href="#">The asyncData
+                                  Method</a>
+                          </li>
+                          <li><span>Getting Started</span><a href="#">The asyncData
+                                  Method</a>
+                          </li>
+                          <li><span>Getting Started</span><a href="#">The asyncData
+                                  Method</a>
+                          </li>
+                      </ul>
                   </li>
-                  <li class="wow fadeInUp" data-wow-delay="0.4s">
-                    <a href="#">Payment</a>
-                  </li>
-                </ul>
-              </div>
-            </form>
+              </ul>
           </div>
-        </div>
       </div>
+  </div>
+</div>  
+</div>
+</div>
+</div>
     </section>
     <section class="page_breadcrumb bg-transparent">
       <div class="container custom_container">
@@ -218,10 +97,10 @@
             <div class="forum-left-sidebar-widget">
               <ul class="list-unstyled nav-sidebar">
                 <li class="nav-item">
-                  <a href="index.html" class="nav-link"><img src="img/side-nav/home.png" alt="">Home</a>
+                  <a href="index.html" class="nav-link"><img src="{{ asset('/font/img/side-nav/home.png')}}" alt="">Home</a>
                 </li>
                 <li class="nav-item active">
-                  <a href="forum-topics.html" class="nav-link"><img src="img/side-nav/question.png"
+                  <a href="forum-topics.html" class="nav-link"><img src="{{ asset('/font/img/side-nav/question.png')}}"
                       alt="briefcase">Questions</a>
                   <span class="icon"><i class="arrow_carrot-down"></i></span>
                   <ul class="list-unstyled dropdown_nav">
@@ -232,13 +111,13 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link"><img src="img/side-nav/link.png" alt="">Communities</a>
+                  <a href="#" class="nav-link"><img src="{{ asset('/font/img/side-nav/link.png')}}" alt="">Communities</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link"><img src="img/side-nav/megaphone.png" alt="">Polls</a>
+                  <a href="#" class="nav-link"><img src="{{ asset('/font/img/side-nav/megaphone.png')}}" alt="">Polls</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link"><img src="img/side-nav/mortarboard.png" alt="">Education</a>
+                  <a href="#" class="nav-link"><img src="{{ asset('/font/img/side-nav/mortarboard.png')}}" alt="">Education</a>
                   <span class="icon"><i class="arrow_carrot-down"></i></span>
                   <ul class="list-unstyled dropdown_nav">
                     <li><a href="#">Typography</a></li>
@@ -249,16 +128,16 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link"><img src="img/side-nav/robot.png" alt="">Technology</a>
+                  <a href="#" class="nav-link"><img src="{{ asset('/font/img/side-nav/robot.png')}}" alt="">Technology</a>
                 </li>
                 <li class="nav-item">
-                  <a href="badges.html" class="nav-link"><img src="img/side-nav/badge.png" alt="">Badges</a>
+                  <a href="badges.html" class="nav-link"><img src="{{ asset('/font/img/side-nav/badge.png')}}" alt="">Badges</a>
                 </li>
                 <li class="nav-item">
-                  <a href="add-question.html" class="nav-link"><img src="img/side-nav/add.png" alt="">Add group</a>
+                  <a href="add-question.html" class="nav-link"><img src="{{ asset('/font/img/side-nav/add.png')}}" alt="">Add group</a>
                 </li>
                 <li class="nav-item">
-                  <a href="user-list.html" class="nav-link"><img src="img/side-nav/chat.png" alt="">User</a>
+                  <a href="user-list.html" class="nav-link"><img src="{{ asset('/font/img/side-nav/chat.png')}}" alt="">User</a>
                   <span class="icon"><i class="arrow_carrot-down"></i></span>
                   <ul class="list-unstyled dropdown_nav">
                     <li><a href="forum-profile.html">User Profile</a></li>
@@ -267,10 +146,10 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link"><img src="img/side-nav/lifeguard.png" alt="">Help</a>
+                  <a href="#" class="nav-link"><img src="{{ asset('/font/img/side-nav/lifeguard.png')}}" alt="">Help</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link"><img src="img/side-nav/bag.png" alt="">Buy Theme</a>
+                  <a href="#" class="nav-link"><img src="{{ asset('/font/img/side-nav/bag.png')}}" alt="">Buy Theme</a>
                 </li>
               </ul>
             </div>
@@ -376,7 +255,7 @@
               <a href="#" class="action_btn custom-sidebar-btn w-100">Ask Question</a>
               <div class="single-widget-box stat-widget-2 mt-40">
                 <div class="widget-header">
-                  <img src="img/statistics-icon.png" alt="icon" />
+                  <img src="{{ asset('/font/img/statistics-icon.png')}}" alt="icon" />
                   <h5>Ama Statistics</h5>
                 </div>
                 <div class="widget-content">
@@ -402,7 +281,7 @@
 
               <div class="single-widget-box top-user mt-40">
                 <div class="widget-header">
-                  <img src="img/user-icon.png" alt="icon" />
+                  <img src="{{ asset('/font/img/user-icon.png')}}" alt="icon" />
                   <h5>Ama User</h5>
                 </div>
                 <div class="widget-content">
@@ -428,36 +307,36 @@
                       <ul class="list-unstyled user-list">
                         <li>
                           1
-                          <img src="img/forum/top-user/user-1.png" alt="" /><a href="#">Craig
+                          <img src="{{ asset('/font/img/forum/top-user/user-1.png')}}" alt="" /><a href="#">Craig
                             Levin</a><span>750
                             pts</span>
                         </li>
                         <li>
                           2
-                          <img src="img/forum/top-user/user-2.png" alt="" /><a href="#">Kadin
+                          <img src="{{ asset('/font/img/forum/top-user/user-2.png')}}" alt="" /><a href="#">Kadin
                             George</a><span>690
                             pts</span>
                         </li>
                         <li>
                           3
-                          <img src="img/forum/top-user/user-3.png" alt="" /><a href="#">Hanna
+                          <img src="{{ asset('/font/img/forum/top-user/user-3.png')}}" alt="" /><a href="#">Hanna
                             Rosser</a><span>650
                             pts</span>
                         </li>
                         <li>
                           4
-                          <img src="img/forum/top-user/user-4.png" alt="" /><a href="#">Phillip Carder</a><span>500
+                          <img src="{{ asset('/font/img/forum/top-user/user-4.png')}}" alt="" /><a href="#">Phillip Carder</a><span>500
                             pts</span>
                         </li>
                         <li>
                           5
-                          <img src="img/forum/top-user/user-5.png" alt="" /><a href="#">Jaxson
+                          <img src="{{ asset('/font/img/forum/top-user/user-5.png')}}" alt="" /><a href="#">Jaxson
                             Rhiel</a><span>425
                             pts</span>
                         </li>
                         <li>
                           6
-                          <img src="img/forum/top-user/user-6.png" alt="" /><a href="#">Marley
+                          <img src="{{ asset('/font/img/forum/top-user/user-6.png')}}" alt="" /><a href="#">Marley
                             Rhiel</a><span>399
                             pts</span>
                         </li>
@@ -467,35 +346,35 @@
                       <ul class="list-unstyled user-list">
                         <li>
                           1
-                          <img src="img/forum/top-user/user-6.png" alt="" /><a href="#">Marley
+                          <img src="{{ asset('/font/img/forum/top-user/user-6.png')}}" alt="" /><a href="#">Marley
                             Rhiel</a><span>399
                             pts</span>
                         </li>
                         <li>
                           2
-                          <img src="img/forum/top-user/user-4.png" alt="" /><a href="#">Martin
+                          <img src="{{ asset('/font/img/forum/top-user/user-4.png')}}" alt="" /><a href="#">Martin
                             Garrix</a><span>500
                             pts</span>
                         </li>
                         <li>
                           3
-                          <img src="img/forum/top-user/user-2.png" alt="" /><a href="#">Avicii</a><span>690 pts</span>
+                          <img src="{{ asset('/font/img/forum/top-user/user-2.png')}}" alt="" /><a href="#">Avicii</a><span>690 pts</span>
                         </li>
                         <li>
                           4
-                          <img src="img/forum/top-user/user-3.png" alt="" /><a href="#">Hanna
+                          <img src="{{ asset('/font/img/forum/top-user/user-3.png')}}" alt="" /><a href="#">Hanna
                             Rosser</a><span>650
                             pts</span>
                         </li>
                         <li>
                           5
-                          <img src="img/forum/top-user/user-5.png" alt="" /><a href="#">Jaxson
+                          <img src="{{ asset('/font/img/forum/top-user/user-5.png')}}" alt="" /><a href="#">Jaxson
                             Rhiel</a><span>425
                             pts</span>
                         </li>
                         <li>
                           6
-                          <img src="img/forum/top-user/user-1.png" alt="" /><a href="#">Craig
+                          <img src="{{ asset('/font/img/forum/top-user/user-1.png')}}" alt="" /><a href="#">Craig
                             Levin</a><span>750
                             pts</span>
                         </li>
@@ -505,36 +384,36 @@
                       <ul class="list-unstyled user-list">
                         <li>
                           1
-                          <img src="img/forum/top-user/user-4.png" alt="" /><a href="#">Phillip Kappa</a><span>500
+                          <img src="{{ asset('/font/img/forum/top-user/user-4.png')}}" alt="" /><a href="#">Phillip Kappa</a><span>500
                             pts</span>
                         </li>
                         <li>
                           2
-                          <img src="img/forum/top-user/user-6.png" alt="" /><a href="#">Marley
+                          <img src="{{ asset('/font/img/forum/top-user/user-6.png')}}" alt="" /><a href="#">Marley
                             Rhiel</a><span>399
                             pts</span>
                         </li>
                         <li>
                           3
-                          <img src="img/forum/top-user/user-3.png" alt="" /><a href="#">Tylor
+                          <img src="{{ asset('/font/img/forum/top-user/user-3.png')}}" alt="" /><a href="#">Tylor
                             Swift</a><span>650
                             pts</span>
                         </li>
                         <li>
                           4
-                          <img src="img/forum/top-user/user-1.png" alt="" /><a href="#">Tony
+                          <img src="{{ asset('/font/img/forum/top-user/user-1.png')}}" alt="" /><a href="#">Tony
                             Stark</a><span>750
                             pts</span>
                         </li>
                         <li>
                           5
-                          <img src="img/forum/top-user/user-5.png" alt="" /><a href="#">Jaxson
+                          <img src="{{ asset('/font/img/forum/top-user/user-5.png')}}" alt="" /><a href="#">Jaxson
                             Rhiel</a><span>425
                             pts</span>
                         </li>
                         <li>
                           6
-                          <img src="img/forum/top-user/user-2.png" alt="" /><a href="#">Steve
+                          <img src="{{ asset('/font/img/forum/top-user/user-2.png')}}" alt="" /><a href="#">Steve
                             Aoki</a><span>690
                             pts</span>
                         </li>
@@ -546,7 +425,7 @@
 
               <div class="single-widget-box related-topic mt-40">
                 <div class="widget-header">
-                  <img src="img/chain.png" alt="icon" />
+                  <img src="{{ asset('/font/img/chain.png')}}" alt="icon" />
                   <h5>Related</h5>
                 </div>
                 <div class="widget-content">
@@ -580,7 +459,7 @@
 
               <div class="single-widget-box tag-widget mt-40">
                 <div class="widget-header">
-                  <img src="img/tags-icon.png" alt="icon" />
+                  <img src="{{ asset('/font/img/tags-icon.png')}}" alt="icon" />
                   <h5>Tags</h5>
                 </div>
                 <div class="widget-content">
