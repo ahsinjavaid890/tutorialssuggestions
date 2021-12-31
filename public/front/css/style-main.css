@@ -6860,6 +6860,7 @@ ul.forum-titles {
 .profile_info .p_info_item_inner .col-sm-4:last-child .p_info_item img {
   margin-top: -13px; }
 .profile_info .p_info_item_inner .p_info_item {
+  height: 140px;
   border: 1px solid #f1f1f8;
   text-align: center;
   padding-bottom: 40px;
@@ -6926,16 +6927,11 @@ ul.forum-titles {
       padding-right: 40px;
       margin-right: 0; }
     .p_social li a {
-      height: 45px;
-      width: 45px;
-      background: #f2f2f7;
-      color: #838793;
-      font-size: 14px;
-      text-align: center;
-      line-height: 45px;
-      display: inline-block;
-      border-radius: 10px;
-      transition: all 300ms linear 0s; }
+    width: 45px;
+    color: #838793;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block; }
       .p_social li a:hover {
         color: #fff;
         background: var(--baseColor2); }

@@ -13,8 +13,7 @@
 <meta property="og:locale" content="it_IT">
 @endsection
 @section('content')
-<!-- ========= Profile Section Start -->
-    <section class="profile-section">
+ <!--    <section class="profile-section">
         <div class="container">
             <div class="row mb-3 mt-3">
                 <div class="col-md-12">
@@ -106,6 +105,5 @@
                 </div>
             </div>
         </div>
-    </section>
-    <!-- ========= Profile Section Start -->
+    </section> -->
 @endsection
