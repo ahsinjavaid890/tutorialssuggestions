@@ -20,6 +20,7 @@
                     <a href="{{ url('ask') }}" class="nav-link dropdown-toggle">Ask Question?</a>
                     
                 </li>
+                @if(Auth::check())
                 <li class="nav-item dropdown submenu">
                     <a href="#">
                         @if(Auth::user()->profileimage)
@@ -35,6 +36,7 @@
                         <li class="nav-item"><a href="typography.html" class="nav-link">Sign Out</a></li>
                     </ul>
                 </li>
+                @endif
             </ul>
             <div class="right-nav">
                 @if(!Auth::check())
