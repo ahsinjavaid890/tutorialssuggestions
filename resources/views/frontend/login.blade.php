@@ -37,31 +37,50 @@
                                       <a href="{{ url('auth/google') }}" class="social-button" id="google-connect"> <span class="google"> Google</span></a>
                                   </div>
                               </div>
-                              <div class="row">
-                                  <div class="form-group">
-                                      <label>Username or Email</label>
-                                      <input type="text" class="form-control" name="">
-                                  </div>
-                              </div>
-                              <div class="row">
-                                  <div class="form-group">
-                                      <label>Pasword</label>
-                                      <input type="text" class="form-control" name="">
-                                  </div>
-                              </div>
-                              <div class="row">
-                                  <div class="col-sm-6 col-md-6 col-lg-6 " id="Remem">
-                                      <input type="checkbox" name="Remember Me"><span class="rem">Remember Me</span>
-                                  </div>
-                                  <div style="text-align: right;" class="col-sm-6 col-md-6 col-lg-6"  id="Remem">
-                                      <a href="#"> Forgot Your Password?</a>
-                                  </div>
-                              </div>
-                              <div class="row">
-                                  <div class="form-group">
-                                      <button type="submit" class="btn btn-block btn-primary">Sign In</button>
-                                  </div>
-                              </div>
+                              @if(session()->has('error'))
+                    <div style="text-align: center;color: red;" id="result">{{ session()->get('error') }}</div>
+                @endif
+                              <form action="{{ route('login') }}" method="POST" id="form">
+                    @csrf
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="email" value="@if(session()->has('email')){{ session()->get('email') }}  @endif" class="form-control" name="email" placeholder="Enter Email" required>
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="password" placeholder="Enter Password" required>
+                                <i class="fa fa-lock"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6 ">
+                              <input id="rememberme" type="checkbox" name=""> <label for="rememberme">Remember Me</label>
+                            </div>
+                            <div class="col-md-6  text-right">
+                              <a href="{{url('forgot-password')}}" class="link-href"> <small>Forget Password?</small> </a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-12 text-center">
+                            <button type="submit" class="btn btn-primary">Login Now</button>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                      <div class="col-md-12 text-center">
+                        <p>Don't have an account ? <a href="{{url('signup')}}" class="link-href"> Signup</a></p>
+                      </div>
+                    </div>
+                    
+                    
+                </form>
                           </div>
                       </div>
                           

@@ -42,34 +42,34 @@
                                 <hr class="hr-text bor" data-content="OR"></hr>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="form-group">
-                                <label>Username or Email</label>
-                                <input type="text" class="form-control" name="">
+                        <form id="regForm" method="POST" action="{{ route('register') }}">
+                            @csrf
+                            <label class="form-group has-float-label mb-4">
+                                <input value="{{ old('name') }}" type="text" class="form-control" name="name" placeholder="Full Name" >
+                                <span>Full name</span>
+                            </label>
+                            @error('name')
+                                <div style="color: red">{{ $message }}</div>
+                            @enderror
+                            <label class="form-group has-float-label mb-4">
+                                <input value="{{ old('email') }}" type="email" class="form-control" name="email" placeholder="Email Address" >
+                                <span>E-mail</span>
+                            </label>
+                            @error('email')
+                                <div style="color: red">{{ $message }}</div>
+                            @enderror
+                            <label class="form-group has-float-label mb-4">
+                                <input type="password" class="form-control" name="password" placeholder="Create a Password">
+                                <span>Password</span>
+                            </label>
+                            @error('password')
+                                <div style="color: red">{{ $message }}</div>
+                            @enderror
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a  href="{{url('/login')}}">Already have an account?  </a>
+                                <button type="submit" class="btn btn-primary btn-lg btn-shadow">Signup</button>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group">
-                                <label>Pasword</label>
-                                <input type="text" class="form-control" name="">
-                            </div>
-                        </div>
-                         <div class="row">
-                            <div class="form-group">
-                                <label>Confirm Pasword</label>
-                                <input type="text" class="form-control" name="">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6 col-md-6 col-lg-6">
-                                <input type="checkbox" name=""> Remember Me
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group sign">
-                                <button type="submit" class="btn btn-block btn-primary ">Sign up</button>
-                            </div>
-                        </div>
+                        </form>
                          <div class="row">
                             <div class="col-sm-6 col-md-6 col-lg-6 rigest ">
                                 <a href="#" class="rigest" >Rigester Now</a>
