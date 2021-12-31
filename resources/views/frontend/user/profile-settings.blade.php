@@ -79,7 +79,6 @@
                 </div>
             </div>
         </section>
-
         <!--================Forum Content Area =================-->
         <section class="forum-user-wrapper">
             <div class="container">
@@ -101,7 +100,6 @@
                                         aria-controls="profile" aria-selected="false">
                                         <i class="icon_documents"></i> Questions
                                     </a>
-
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab"
@@ -121,8 +119,6 @@
                     <div class="col-lg-9">
                          <div class="col-lg-9 col-xl-10">
                         <div class="user-details-widget">
-                            
-
                                     <div class="card card-ask box-shadow">
                                     <div class="card-body p-4">
                                         <form enctype="multipart/form-data" method="POST" action="{{ url('/updateuserprofile') }}">
@@ -143,7 +139,6 @@
                                                     <div id="usernameerror"></div>
                                                 </div> 
                                             </div>
-                                            
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
@@ -171,11 +166,8 @@
                                                 <button id="submitbutton" type="submit" class="btn btn-primary btn-block">Sign In</button>
                                                  </div>
                                             </div>
-                                                   
                                                 </div>
-                                                 
-                                            </div>                                                              
-                                            
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
@@ -207,7 +199,6 @@
                                                         <input type="text"  class="form-control" placeholder="R.Password" >
                                                     </div>
                                                 </div>
-                                                
                                             </div> 
                                             <div class="row">
                                                 <div class="col-md-6">
@@ -216,17 +207,13 @@
                                                 <button id="submitbutton" type="submit" class="btn btn-primary btn-block">Save</button>
                                                  </div>
                                             </div>
-                                                   
-                                                </div>
-                                                 
-                                            </div>                                                              
-                                            
+                                              </div> 
+                                       </div>             
                                         </form>
                                     </div>
                                 </div>
                             </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
