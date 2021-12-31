@@ -7625,7 +7625,7 @@ input[type="number"] {
   .forum-category-area .single-category-widget:hover {
     box-shadow: 0px 20px 45px 0px #334d7226; }
     .forum-category-area .single-category-widget:hover h5 {
-      color: var(--brand_color) !important; }
+      color: #4a6ee0 !important; }
   .forum-category-area .single-category-widget h5 {
         font-size: 15px;
     font-weight: 500;
