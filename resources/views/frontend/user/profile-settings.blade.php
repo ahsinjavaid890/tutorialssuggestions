@@ -97,9 +97,12 @@
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab"
-                                        aria-controls="profile" aria-selected="false">
-                                        <i class="icon_documents"></i> Questions
-                                    </a>
+                                        aria-controls="profile" aria-selected="false" >
+                                        <i class="icon_documents"></i> Questions<span class="dropdown-toggle arrows"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="">any questions</a></li>
+                                            
+                                        </ul>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab"
