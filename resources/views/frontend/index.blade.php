@@ -338,6 +338,7 @@
 </div>
 </section>
 
+
 <section class="forum-blog-area pt-100 bg-disable">
     <div class="container">
         <div class="newsletter-form-widget">
