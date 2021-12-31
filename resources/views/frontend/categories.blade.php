@@ -54,6 +54,7 @@
                         @endif
                         
                         <h5>{{ $r->name }}</h5>
+                        <p>{{ $r->color }}</p>
                     </div>
                 </a>
             </div>

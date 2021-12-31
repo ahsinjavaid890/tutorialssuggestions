@@ -7614,12 +7614,14 @@ input[type="number"] {
     .forum-category-area .single-category-widget:hover h5 {
       color: var(--brand_color) !important; }
   .forum-category-area .single-category-widget h5 {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
-    line-height: 21px;
+    line-height: 0px;
     color: #171d24;
+    text-align: left;
     margin-bottom: 0;
-    margin-top: 23px;
+    padding-left: 16px;
+    margin-top: 0px;
     transition: all 0.3s ease-out; }
 
 /*=========== Forum Post Widget css ==========*/
