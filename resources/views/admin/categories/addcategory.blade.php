@@ -27,7 +27,7 @@
         <div class="col-lg-8">
             <div class="card">
                 <div class="card-header">
-                    Subject Details
+                    Category Details
                 </div>
                 <div class="card-body">
                         <div class="form-group mb-3">
@@ -48,23 +48,28 @@
                             </div>
                         </div>
                         <div class="form-group mb-3">
-                            <label for="validationCustom01">Category Background Color</label>
-                            <input type="text" class="form-control" name="color" id="validationCustom01"
-                                placeholder="Title" required>
+                            <label for="validationCustom01">Category Description</label>
+                            <textarea class="form-control" required placeholder="Enter Category Description" name="color"></textarea>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
-                        <div class="form-group mb-3">
+                        <div class="form-group mb-2">
+                            <label for="validationCustom02">Category Order</label>
+                            <input class="form-control" id="order"  type="number"  name="order" required>
+                                 <small id="slugerror" class="mt-1 text-danger"></small>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div style="display: none;" class="form-group mb-3">
                             <label for="validationCustom01">Category Text Color</label>
-                            <input type="text" value="style='color:black !important'" class="form-control" name="text_color" id="validationCustom01"
+                            <input type="hidden" value="style='color:black !important'" class="form-control" name="text_color" id="validationCustom01"
                                 placeholder="Title" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
-
-                        
                         <div class="form-group mb-3">
                             <label for="validationCustom03">Icon / Image</label>
                             <input type="file" class="form-control" name="icon" id="validationCustom09"
@@ -113,14 +118,7 @@
                             <input type="radio" value="delete" name="status" id="delete">
                             <label for="delete">Not Published</label>
                         </div>
-                        <div class="row mb-2">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="order">Category Order</label>
-                                    <input class="form-control" id="order"  type="number"  name="order">
-                                </div>
-                            </div>
-                        </div>
+                        
                 </div> <!-- end card-body-->
             </div> <!-- end card-->
             <div class="row">
