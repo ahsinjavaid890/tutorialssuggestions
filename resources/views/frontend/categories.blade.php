@@ -96,13 +96,26 @@
                         @if(!empty(Cmf::get_image_name('subjectimages' , 'subjectid' , $r->id)->first()->image_name))
                             <img src="{{ url('/images/') }}/{{ Cmf::get_image_name('subjectimages' , 'subjectid' , $r->id)->first()->image_name }}" alt="icon">
                         @endif
-                        
                         <h5>{{ $r->name }}</h5>
                         <p>{{ $r->backgroundcolor }}</p>
+                        <div class="row">
+                            <div class="col-lg-12 co-md-12 col-sm-12">
+                               <div class="questiontag">
+                                   {{ DB::table('answerquestions')->where('question_subject' , $r->name)->where('delete_status' , 'Active')->count() }} Questions
+                               </div>
+                            </div>
+                        </div>
                     </div>
                 </a>
             </div>
             @endforeach
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                {!! $data->links('frontend.newpagination') !!}
+            </div>
+            
         </div>
     </div>
 </section>
