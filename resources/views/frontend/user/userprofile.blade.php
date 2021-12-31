@@ -13,6 +13,8 @@
 <meta property="og:locale" content="it_IT">
 @endsection
 @section('content')
+
+
 <div class="mobile_main_menu  sticky-nav menu_one">
             <div class="container">
                 <div class="mobile_menu_left">
@@ -59,70 +61,7 @@
                     </a>
                 </div>
             </div>
-            <div class="mobile_nav_wrapper">
-                <nav class="mobile_nav_top">
-                    <ul class="navbar-nav menu ms-auto">
-                        <li class="nav-item dropdown submenu ">
-                            <a href="index.html" class="nav-link dropdown-toggle">Home</a>
-                            <i class="arrow_carrot-down_alt2 mobile_dropdown_icon"></i>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item "><a href="index.html" class="nav-link">Demo 01</a></li>
-                                <li class="nav-item"><a href="index-2.html" class="nav-link">Demo 02</a></li>
-                                <li class="nav-item "><a href="index-3.html" class="nav-link">Demo 03</a></li>
-                                <li class="nav-item "><a href="index-4.html" class="nav-link">Demo 04</a></li>
-                                <li class="nav-item "><a href="index-5.html" class="nav-link">Demo 05</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown submenu">
-                            <a class="nav-link dropdown-toggle" href="#">
-                                Pages
-                            </a>
-                            <i class="arrow_carrot-down_alt2 mobile_dropdown_icon"></i>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a href="Layout_Header-Search-1.html" class="nav-link">Header
-                                        Layout 01</a></li>
-                                <li class="nav-item"><a href="Layout_Header-Search-2.html" class="nav-link">Header
-                                        Layout 02</a></li>
-                                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                                <li class="nav-item"><a href="typography.html" class="nav-link">Typography</a></li>
-                                <li class="nav-item"><a href="404-error.html" class="nav-link">404 Error</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown submenu active">
-                            <a class="nav-link dropdown-toggle" href="forums.html">
-                                Forum
-                            </a>
-                            <i class="arrow_carrot-down_alt2 mobile_dropdown_icon"></i>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item "><a href="forums.html" class="nav-link">Forums Root</a></li>
-                                <li class="nav-item"><a href="forum-topics.html" class="nav-link">Forum Topics</a></li>
-                                <li class="nav-item"><a href="forum-topics-2.html" class="nav-link">Forum Topics Two</a>
-                                </li>
-                                <li class="nav-item"><a href="forum-single.html" class="nav-link">Topic Details</a></li>
-                                <li class="nav-item active"><a href="forum-profile.html" class="nav-link">User
-                                        Profile</a></li>
-                                <li class="nav-item "><a href="add-question.html" class="nav-link">Add Question</a></li>
-                                <li class="nav-item"><a href="user-list.html" class="nav-link">User List</a></li>
-                                <li class="nav-item"><a href="user-details.html" class="nav-link">User Details</a></li>
-                                <li class="nav-item"><a href="badges.html" class="nav-link">User Badges</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown submenu">
-                            <a class="nav-link dropdown-toggle" href="#">
-                                Blog
-                            </a>
-                            <i class="arrow_carrot-down_alt2 mobile_dropdown_icon"></i>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item"><a href="blog-grid.html" class="nav-link">Blog Grid</a></li>
-                                <li class="nav-item"><a href="blog-grid-two.html" class="nav-link">Blog Grid Two</a>
-                                </li>
-                                <li class="nav-item"><a href="blog-list.html" class="nav-link">Blog List</a></li>
-                                <li class="nav-item"><a href="blog-single.html" class="nav-link">Blog Details</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+           
         </div>
         <section class="doc_banner_area single_breadcrumb">
             <ul class="list-unstyled banner_shap_img">
@@ -1121,3 +1060,5 @@
                 </div>
             </div>
         </section>
+
+@endsection
