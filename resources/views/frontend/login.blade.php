@@ -45,12 +45,14 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
+                              <label>Email or Number</label>
                                 <input type="email" value="@if(session()->has('email')){{ session()->get('email') }}  @endif" class="form-control" name="email" placeholder="Enter Email" required>
                                 <i class="fa fa-envelope"></i>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
+                              <label>Password</label>
                                 <input type="password" class="form-control" name="password" placeholder="Enter Password" required>
                                 <i class="fa fa-lock"></i>
                             </div>
@@ -69,7 +71,7 @@
 
                     <div class="row mt-3">
                         <div class="col-md-12 text-center">
-                            <button type="submit" class="btn btn-primary">Login Now</button>
+                            <button type="submit" class="btn btn-sign">Login Now</button>
                         </div>
                     </div>
 

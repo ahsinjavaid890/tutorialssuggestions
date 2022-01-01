@@ -1556,9 +1556,9 @@ p kbd {
   font-size: 16px;
   font-weight: 400;
   color: #fff;
-  box-shadow: 0 20px 30px 0 rgba(17, 166, 131, 0.24);
+ 
   border-radius: 4px;
-  background:#140f4d;
+  background:  #078669;
   display: inline-block;
   padding: 14px 28px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.18s ease-in-out; }
@@ -1567,7 +1567,8 @@ p kbd {
     font-size: 18px;
     padding-left: 5px; }
   .action_btn:hover {
-    box-shadow: none;
+    box-shadow: 0 20px 30px 0 rgba(17, 166, 131, 0.24);
+    background-color: #140f4d;
     color: #fff; }
 
 .btn-text-medium {
@@ -1580,9 +1581,9 @@ p kbd {
     padding-right: 5px; }
 
 .doc_border_btn {
-  border: 2px solid  #083381;
+  border:2px solid  #078669;
   border-radius: 4px;
-  color:  #083381;
+  color: white;
   font-size: 14px;
   font-weight: 500;
   background: rgba(17, 166, 131, 0.05);
@@ -6336,7 +6337,7 @@ ul.forum-titles {
   .w_tag_list.style-light li a:hover {
     background: rgba(17, 166, 131, 0.15);
     color: var(--brand_color);
-    box-shadow: none; }
+    box-shadow: none; }   
 
 .usefull-links {
   margin: 0;
@@ -7879,7 +7880,7 @@ input[type="number"] {
       border-radius: 5px;
       font-size: 18px;
       font-weight: 500;
-      background-color: transparent;
+      background-color:#078669;
       padding: 8px 0; }
       .forum-right-sidebar-widget .single-widget-box.login-widget button:hover {
         background-color:  #083381; }
@@ -12883,13 +12884,13 @@ body.body_dark {
 }
 
 #facebook-connect {
-    background: rgb(255, 255, 255) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/facebook.svg?sanitize=true') no-repeat scroll 5px 0px / 30px 50px padding-box border-box;
-    border: 1px solid rgb(60, 90, 154);
+    background: rgb(7 134 105) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/facebook.svg?sanitize=true') no-repeat scroll 5px 0px / 30px 50px padding-box border-box;
+    border: 1px solid rgb(7 134 105);
 }
 
 #facebook-connect:hover {
-      border-color: rgb(60, 90, 154);
-      background: rgb(60, 90, 154) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/facebook-white.svg?sanitize=true') no-repeat scroll 5px 0px / 30px 50px padding-box border-box;
+      border-color: rgb(20 15 77);
+      background: rgb(20 15 77) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/facebook-white.svg?sanitize=true') no-repeat scroll 5px 0px / 30px 50px padding-box border-box;
       -webkit-transition: all .8s ease-out;
     -moz-transition: all .3s ease;
     -ms-transition: all .3s ease;
@@ -12899,7 +12900,7 @@ body.body_dark {
 
 #facebook-connect span {
       box-sizing: border-box;
-    color: rgb(60, 90, 154);
+    color: white;
     cursor: pointer;
     text-align: center;
     text-transform: uppercase;
@@ -12922,13 +12923,13 @@ body.body_dark {
 }
 
 #google-connect {
-    background: rgb(255, 255, 255) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/google-plus.png') no-repeat scroll 5px 0px / 50px 50px padding-box border-box;
-    border: 1px solid rgb(220, 74, 61);
+    background: rgb(7 134 105) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/google-plus.png') no-repeat scroll 5px 0px / 50px 50px padding-box border-box;
+    border:1px solid rgb(7 134 105);
 }
 
 #google-connect:hover {
-      border-color: rgb(220, 74, 61);
-      background: rgb(220, 74, 61) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/google-plus-white.png') no-repeat scroll 5px 0px / 50px 50px padding-box border-box;
+      border-color: rgb(20 15 77);
+      background:rgb(20 15 77) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/google-plus-white.png') no-repeat scroll 5px 0px / 50px 50px padding-box border-box;
       -webkit-transition: all .8s ease-out;
     -moz-transition: all .3s ease;
     -ms-transition: all .3s ease;
@@ -12938,11 +12939,11 @@ body.body_dark {
 
 #google-connect span {
       box-sizing: border-box;
-    color: rgb(220, 74, 61);
+    color: white;
     cursor: pointer;
     text-align: center;
     text-transform: uppercase;
-    border: 0px none rgb(220, 74, 61);
+    border:0px none rgb(7 134 105);
     outline: rgb(255, 255, 255) none 0px;
       -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
@@ -13056,7 +13057,7 @@ body.body_dark {
 }
 .rigest{
     text-align: right;
-    width: 475px;
+    width: 460px;
 }
 .sec{
     padding: 100px 0;
@@ -13124,4 +13125,16 @@ body.body_dark {
       background: #220f4d;
       border-color: #3a3460;
       color: #fff; 
-    }
+}
+.btn-sign{
+    width: 110px;
+    border-radius: 10px;
+    color: white;
+    background-color: #078669;
+    border-color: #078669;
+}
+.btn-sign:hover{
+ background-color: #140f4d;
+ border-color:#140f4d;
+ color: white;
+}

@@ -38,46 +38,63 @@
                                 <a href="#" class="social-button" id="google-connect"> <span class="google"> Google
                                 </span></a>
                             </div>
-                            <div class="col-lg-12">
-                                <hr class="hr-text bor" data-content="OR"></hr>
+                            <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                              <label>Full Name</label>
+                                <input type="name" value="@if(session()->has('name')){{ session()->get('name') }}  @endif" class="form-control" name="email" placeholder="Enter Name" required>
+                                <i class="fa fa-envelope"></i>
                             </div>
                         </div>
-                        <form id="regForm" method="POST" action="{{ route('register') }}">
-                            @csrf
-                            <label class="form-group has-float-label mb-4">
-                                 <span>Full name</span>
-                                <input value="{{ old('name') }}" type="text" class="form-control" name="name" placeholder="Full Name" >
-                               
-                            </label>
-                            @error('name')
-                                <div style="color: red">{{ $message }}</div>
-                            @enderror
-                            <label class="form-group has-float-label mb-4">
-                                 <span>E-mail</span>
-                                <input value="{{ old('email') }}" type="email" class="form-control" name="email" placeholder="Email Address" >
-                               
-                            </label>
-                            @error('email')
-                                <div style="color: red">{{ $message }}</div>
-                            @enderror
-                            <label class="form-group has-float-label mb-4">
-                                 <span>Password</span>
-                                <input type="password" class="form-control" name="password" placeholder="Create a Password">
-                               
-                            </label>
-                            @error('password')
-                                <div style="color: red">{{ $message }}</div>
-                            @enderror
+                        <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                              <label>Email</label>
+                                <input type="email" value="@if(session()->has('email')){{ session()->get('email') }}  @endif" class="form-control" name="email" placeholder="Enter Email" required>
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" class="form-control" name="password" placeholder="Enter Password" required>
+                                <i class="fa fa-lock"></i>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="col-md-12">
+                        <div class="row">
+                            
                             <div class="d-flex justify-content-between align-items-center">
                                 <a  href="{{url('/login')}}">Already have an account?  </a>
-                                <button type="submit" class="btn btn-primary btn-lg btn-shadow">Signup</button>
+                               
                             </div>
-                        </form>
-                         <div class="row">
+                            
+                        <div class="row">
+                            <div class="col-md-4">
+                                 <div class="col-sm-6 col-md-6 col-lg-6 rigest ">
+                                <button type="submit" class="btn  btn-lg btn-shadow btn-sign">Signup</button>
+                            </div>
+                            </div>
+                            </div>
+                            <div class="row">
+                                 <div class="col-md-4">
                             <div class="col-sm-6 col-md-6 col-lg-6 rigest ">
                                 <a href="#" class="rigest" >Rigester Now</a>
                             </div>
                         </div>
+                        </div>
+                    </div>
+
+                            </label>
+                            @error('password')
+                                <div style="color: red">{{ $message }}</div>
+                            @enderror
+                            
+                            </div>
+                        </form>
+                         
                     </div>
                 </div>
                     
