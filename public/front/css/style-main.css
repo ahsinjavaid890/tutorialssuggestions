@@ -9083,7 +9083,7 @@ color: #1d2746; }
 display: flex; }
 .forum-post-top .forum-post-author .forum-author-meta span,
 .forum-post-top .forum-post-author .forum-author-meta a {
-  color: #00ffc5;
+  color: #444444;
   font-size: 14px; }
 .forum-post-top .forum-post-author .forum-author-meta a:hover {
   color: var(--brand_color); }
@@ -9092,7 +9092,7 @@ display: flex; }
   margin-right: 5px; }
 .forum-post-top .forum-post-author .forum-author-meta .author-badge i {
   margin-right: 5px;
-  color: #00ffc5; }
+  color: #444444; }
 .forum-post-top .forum-post-author .forum-author-meta .author-badge:first-child {
   margin-right: 20px; }
 
@@ -9170,7 +9170,7 @@ font-weight: 600; }
 
 /** === Best Answer === **/
 .best-answer {
-background: #4a6ee0;
+background: #f1fdf3;
 padding: 30px 40px 30px 30px;
 margin-top: 60px;
 border-radius: 6px; }
@@ -13146,7 +13146,7 @@ border-color:#140f4d;
 color: white;
 }
 .question1 {
-  background-color:#305ef5 ;
+  background-color:#e7e8eb ;
   padding: 30px 40px 30px 30px;
   margin-top: 60px;
   border-radius: 6px;
