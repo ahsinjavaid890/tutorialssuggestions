@@ -41,7 +41,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ url('') }}">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">{{ $data->question_name, 130 }}</li>
+                        <li class="breadcrumb-item active"  aria-current="page">{{ $data->question_name, 130 }}</li>
                     </ol>
                 </nav>
             </div>
@@ -58,6 +58,7 @@
         <div class="row">
             <div class="col-lg-9">
                 <!-- Forum post top area -->
+                <div class="question1">
                 <div class="row">
                     <div class="col-lg-9 col-md-8">
                         <div class="forum-post-top">
@@ -89,6 +90,7 @@
                 </div>
 
                 <!-- Forum post content -->
+                
                 <div class="q-title">
                     <span class="question-icon" title="Question">Q:</span>
                     <h1>{{ $data->question_name }}</h1>
@@ -122,6 +124,7 @@
                         @endif
                     </div>
                     
+                </div>
                 </div>
                 <?php $i = 0; ?>
                 @foreach($answers as $r)
