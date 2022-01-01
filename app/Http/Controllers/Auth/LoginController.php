@@ -76,7 +76,12 @@ class LoginController extends Controller
                 if (auth()->user()->is_admin == 1) {
                     return redirect()->route('admin.dashboard');
                 }else{
-                   return redirect()->route('dashboard');
+                   if(!isset($_COOKIE['redirecturl'])) {
+                        return redirect()->route('home');
+                    } else {
+                       $newURL =  $_COOKIE['redirecturl'];
+                       return Redirect::to($newURL);
+                    }
                 }
             }else{
                 return redirect()->route('login')->with(array('error'=>'Email-Address or Password Are Wrong.' , 'email'=>$request->email));

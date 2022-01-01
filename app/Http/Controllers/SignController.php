@@ -18,7 +18,17 @@ class SignController extends Controller
     }
     public function signin()
     {
-        return view('frontend.login');
+        if(Auth::check())
+        {
+            if(!isset($_COOKIE['redirecturl'])) {
+                return redirect()->route('home');
+            } else {
+               $newURL =  $_COOKIE['redirecturl'];
+               return Redirect::to($newURL);
+            }
+        }else{
+            return view('frontend.login');
+        }    
     }
     public function redirectToGoogle()
     {

@@ -33,7 +33,7 @@
             
 
             <div class="post-time">
-                <img src="{{ asset('/front/img/time-outline.svg')}}" alt="">10 min ago
+                <img src="{{ asset('/front/img/time-outline.svg')}}" alt="">{{ Cmf::create_time_ago($r->created_at) }}
             </div>
             <div class="post-category">
                 <a href="#">
@@ -42,13 +42,12 @@
             </div>
         </div>
         <div class="post-tags">
-            <div class="single-tag tag-jq">jQuery</div>
-            <div class="single-tag tag-php">Php</div>
+            <div class="single-tag tag-php">{{ $r->question_subject }}</div>
         </div>
     </div>
     <div class="post-reach">
         <div class="post-view">
-            <img src="{{ asset('/front/img/forum/eye-outline.svg')}}" alt="icon">591 Views
+            <img src="{{ asset('/front/img/forum/eye-outline.svg')}}" alt="icon">{{ $r->no_of_views }} Views
         </div>
         <div class="post-like">
             <img src="{{ asset('/front/img/forum/thumbs-up-outline.svg')}}" alt="icon">250 Likes

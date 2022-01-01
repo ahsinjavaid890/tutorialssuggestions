@@ -38,7 +38,6 @@ class HomeController extends Controller
     }
     public function dashboard()
     {
-        echo "string";exit;
       if(empty(Auth::user()->accessid))
       {
         $userid = Auth::user()->id;
